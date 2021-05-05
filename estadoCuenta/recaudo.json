@@ -1,68 +1,75 @@
 {
     "columns": [
+        "Concepto",
         "Fecha",
         "Pago",
-        "Valor",
-        "Concepto"
+        "Valor"
     ],
     "index": [
-        999,
-        214,
-        1030,
-        320,
-        1061,
-        1182,
-        1092,
-        1122
+        31,
+        888,
+        220,
+        911,
+        934,
+        1205,
+        417,
+        957,
+        980
     ],
     "data": [
         [
+            "ABONO MATRICULA",
+            "2020-11-06",
+            "46,430",
+            "0"
+        ],
+        [
+            "COSTO MATRICULA 2021 \ud83d\udd34",
             "2020-12-05",
-            0,
-            272000,
-            "COSTO MATRICULA 2021 \ud83d\udd34"
+            "0",
+            "272,000"
         ],
         [
+            "MATRICULA",
             "2021-02-03",
-            316950,
-            0,
-            "TRANSFERENCIA \ud83d\udfe2"
+            "226,000",
+            "0"
         ],
         [
+            "PENSI\u00d3N FEBRERO 2021 \ud83d\udd34",
             "2021-02-05",
-            0,
-            155000,
-            "PENSI\u00d3N FEBRERO 2021 \ud83d\udd34"
+            "0",
+            "169,000"
         ],
         [
-            "2021-03-01",
-            155000,
-            0,
-            "TRANSFERENCIA \ud83d\udfe2"
-        ],
-        [
+            "PESI\u00d3N MARZO 2021 \ud83d\udd34",
             "2021-03-05",
-            0,
-            155000,
-            "PENSI\u00d3N MARZO 2021 \ud83d\udd34"
+            "0",
+            "169,000"
         ],
         [
+            "PLATAFORMA \ud83d\udd34",
             "2021-03-05",
-            0,
-            45000,
-            "PLATAFORMA \ud83d\udd34"
+            "0",
+            "45,000"
         ],
         [
+            "FEBRERO, MARZO",
+            "2021-03-26",
+            "340,000",
+            "0"
+        ],
+        [
+            "PENSI\u00d3N ABRIL 2021 \ud83d\udd34",
             "2021-04-05",
-            0,
-            155000,
-            "PENSI\u00d3N ABRIL 2021 \ud83d\udd34"
+            "0",
+            "169,000"
         ],
         [
+            "PENSI\u00d3N MAYO 2021 \ud83d\udd34",
             "2021-05-05",
-            0,
-            155000,
-            "PENSI\u00d3N MAYO 2021 \ud83d\udd34"
+            "0",
+            "169,000"
         ]
     ]
 }

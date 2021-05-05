@@ -8,6 +8,11 @@ def sample_responses(input_text):
 
     if user_message in ("hello", "hi","hola","buenos días", "buenas noches","buenas tardes","good morning","good morning academia",):
         return "👋 Hola, cordial saludo!"
+    
+    if user_message in ("gracias", "muchas gracias","thanks you","thanks",):
+        aleatorio_gracias = choice(["Wonderfull 💫","Genial 👌🏽","Me gusta 👍🏽","Maravilloso 🌺","🌼","🌻","💐"])
+        return aleatorio_gracias
+    
     if user_message in ("estado de cuenta", ):
         return  "Por favor escirba el NUIP del estudiante..." 
 
@@ -17,13 +22,13 @@ def sample_responses(input_text):
         filtro = recaudoPD["ID"] == id_est
         my_filtro = recaudoPD[filtro]
         myFiltroSort = my_filtro.sort_values("Fecha")
+        myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:,}".format)
 
-        file1 = myFiltroSort[["Fecha","Pago","Valor","Concepto"]]
+        file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
 
         f = open("recaudo.txt","w")
-        f.write("🇪​​​​​🇸​​​​​🇹​​​​​🇦​​​​​🇩​​​​​🇴​​​​  🇨​​​​​🇺​​​​​🇪​​​​​🇳​​​​​🇹​​​​​🇦​​​"+"\n\n"+str("Estudiante:  "+my_filtro.iloc[1,1])+'\n\n')
-        f.write("Conceptos por pagar => 🔴"+"\n"+"Pagos realizados => 🟢"+"\n\n")
-        f.write("   Fecha    |    Valor    |    Concepto"+'\n')
+        f.write("🇪​​​​​🇸​​​​​🇹​​​​​🇦​​​​​🇩​​​​​🇴​​​​  🇨​​​​​🇺​​​​​🇪​​​​​🇳​​​​​🇹​​​​​🇦​​​"+"\n\n"+str("Estudiante:\n"+my_filtro.iloc[1,1])+'\n\n')
+        f.write("Conceptos y pagos:\n")
         archivoJson = file1.to_json(orient="split")
         parsed = json.loads(archivoJson)
 
@@ -42,16 +47,16 @@ def sample_responses(input_text):
                 f.write(str(recaudo_json["data"][i])+'\n')
 
         f=open("recaudo.txt","a")
-        totalCostos = myFiltroSort["Valor"].sum()
-        totalPagos = myFiltroSort["Pago"].sum()
+        totalCostos = my_filtro["Valor"].sum()
+        totalPagos = my_filtro["Pago"].sum()
         pendiente = totalCostos-totalPagos
         f.write("\n")
-        f.write("Costos Educativos: {:,} ".format(totalCostos))
+        f.write("Total a la fecha :    "+"{:,}".format(totalCostos))
         f.write("\n")
-        f.write("🟢 Pagos Realizados: {:,}".format(totalPagos))                 
+        f.write("🟢 Pagado         :    "+"{:,}".format(totalPagos))                 
         f.write("\n")                                                          
-        f.write("🔴 Pendiente por pagar: {:,}".format(pendiente))              
-        f.write("\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
+        f.write("🔴 Pendientes    :    "+"{:,}".format(pendiente))              
+        f.write("\n\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
         f.write("/mediodepago")
         f.close()
 
@@ -72,26 +77,47 @@ def sample_responses(input_text):
         registro=open("recaudoText1.txt","r")
         f = open("recaudoText2.txt","w")
         for x in registro:
-            xf=x.replace(", ","  |  ")
+            xf=x.replace("🔴\', \'","🔴 => Plazo: ")
             f.write(xf)
         f.close()
 
         registro=open("recaudoText2.txt","r")
         f = open("recaudoText3.txt","w")
         for x in registro:
-            xf=x.replace("\'","")
+            xf=x.replace("\', \'0\', \'","\nValor a pagar:")
             f.write(xf)
         f.close()
 
         registro=open("recaudoText3.txt","r")
         f = open("recaudoText4.txt","w")
         for x in registro:
-            xf=x.replace(" 0 ","")
+            xf=x.replace("\'","")
             f.write(xf)
         f.close()
 
-        f = open("recaudoText4.txt","r") 
+        registro=open("recaudoText4.txt","r")
+        f = open("recaudoText5.txt","w")
+        for x in registro:
+            xf=x.replace("🟢, ","🟢=>Fecha:")
+            f.write(xf)
+        f.close()
+
+        registro=open("recaudoText5.txt","r")
+        f = open("recaudoText6.txt","w")
+        for x in registro:
+            xf=x.replace(", 0","")
+            f.write(xf)
+        f.close()
+
+        registro=open("recaudoText6.txt","r")
+        f = open("recaudoText7.txt","w")
+        for x in registro:
+            xf=x.replace(", ","\nPagado: $")
+            f.write(xf)
+        f.close()
+
+        f = open("recaudoText7.txt","r") 
         return f.read()
-    aleatorio = choice(["/help 💬","🟠🟢🔵🔴","","","","",""])
+    aleatorio = choice(["/help 💬","🟠🟢🔵🔴","","","","","",""])
     return aleatorio
 
