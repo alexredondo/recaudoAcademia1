@@ -1,0 +1,68 @@
+{
+    "columns": [
+        "Fecha",
+        "Pago",
+        "Valor",
+        "Concepto"
+    ],
+    "index": [
+        999,
+        214,
+        1030,
+        320,
+        1061,
+        1182,
+        1092,
+        1122
+    ],
+    "data": [
+        [
+            "2020-12-05",
+            0,
+            272000,
+            "COSTO MATRICULA 2021 \ud83d\udd34"
+        ],
+        [
+            "2021-02-03",
+            316950,
+            0,
+            "TRANSFERENCIA \ud83d\udfe2"
+        ],
+        [
+            "2021-02-05",
+            0,
+            155000,
+            "PENSI\u00d3N FEBRERO 2021 \ud83d\udd34"
+        ],
+        [
+            "2021-03-01",
+            155000,
+            0,
+            "TRANSFERENCIA \ud83d\udfe2"
+        ],
+        [
+            "2021-03-05",
+            0,
+            155000,
+            "PENSI\u00d3N MARZO 2021 \ud83d\udd34"
+        ],
+        [
+            "2021-03-05",
+            0,
+            45000,
+            "PLATAFORMA \ud83d\udd34"
+        ],
+        [
+            "2021-04-05",
+            0,
+            155000,
+            "PENSI\u00d3N ABRIL 2021 \ud83d\udd34"
+        ],
+        [
+            "2021-05-05",
+            0,
+            155000,
+            "PENSI\u00d3N MAYO 2021 \ud83d\udd34"
+        ]
+    ]
+}
