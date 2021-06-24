@@ -29,29 +29,29 @@ def sample_responses(input_text):
         return  f.read()
 
 #Saludo informal
-    intent_saludo_informal_usuario = ("hello", "hi","hola",)
-    for saludo in intent_saludo_informal_usuario:
-        aleatorio_hello_informal = choice(["Hola, que tal 👍","👋Hola, soy @lajirafabot","Hi! God bless you 👍","","","","","","Blessing 🙏"])
-        if re.search(saludo, user_message) is not None:
-            return aleatorio_hello_informal
+#    intent_saludo_informal_usuario = ("hello", "hi","hola",)
+#    for saludo in intent_saludo_informal_usuario:
+#        aleatorio_hello_informal = choice(["Hola, que tal 👍","👋Hola, soy @lajirafabot","Hi! God bless you 👍","","","","","","","","","","","Blessing 🙏"])
+#        if re.search(saludo, user_message) is not None:
+#            return aleatorio_hello_informal
 
 #Saludo formal
-    intent_saludo_formal_usuario = ("buenos dias", "buenas noches","buenas tardes","good morning","good morning academia","buen dia","buenos días")
-    for saludo in intent_saludo_formal_usuario:
-        aleatorio_saludo_formal = choice(["","👋Te saluda @lajirafabot","👋 Hola, cordial saludo @lajirafabot","Dios le bendiga 👍","","","","Bendiciones 🙏","*♥.•´¸.•*´✶´♡ ¸.•*´´♡*💚˚*\n*_○💙   Greetings  💙*˚*\n*💚.•´¸.•*´✶´♡ ¸.•*´´♡⛅*\n*° ☆ ° ˛*˛☆_Π____*_*˚☆*\n*˚ ˛★˛•˚ */______/ ~＼。˚ ˚\n*˚ ˛•˛•🌈｜ 田田 ｜門｜ ˚*\n*🌴╬═🌴╬╬🌴╬╬🌴═╬╬═🌴"])
-        if re.search(saludo, user_message) is not None:
-            return aleatorio_saludo_formal
+#    intent_saludo_formal_usuario = ("buenos dias", "buenas noches","buenas tardes","good morning","good morning academia","buen dia","buenos días")
+#    for saludo in intent_saludo_formal_usuario:
+#        aleatorio_saludo_formal = choice(["","👋Te saluda @lajirafabot","👋 Hola, cordial saludo @lajirafabot","Dios le bendiga 👍","","","","","","","","","Bendiciones 🙏"])
+#        if re.search(saludo, user_message) is not None:
+#            return aleatorio_saludo_formal
 
 
 #Emojis
-    intent_emoji = ("👏","excelente","⭐️","👍👍")
+    intent_emoji = ("👏👏","excelente","⭐️⭐️","👍👍")
     for emoji in intent_emoji:
         aleatorio_emocion_emoji = choice(["Maravilloso 🌺","Genial 🌻","Me gusta 🌷"])
         if re.search(emoji, user_message) is not None:
             return aleatorio_emocion_emoji
 
 #Agradecimiento
-    if user_message in ("gracias", "muchas gracias","thanks you","thanks","gracias teacher"):
+    if user_message in ("muchas gracias","thanks you","gracias teacher"):
         aleatorio_gracias = choice(["🧡💚💙❤️","🟠🟢🔵🔴","Wonderfull 💫","Genial 👌🏽","Me gusta 👍🏽","Maravilloso 🌺","🌼","🌻","💐"])
         return aleatorio_gracias
 
@@ -177,6 +177,6 @@ def sample_responses(input_text):
         return f.read()
 
 #Default 
-    aleatorio = choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴","🟧🟧🟧🟦🟦🟦🟩🟩🟩🟥🟥🟥","*•.¸♥️¸.•*´💖 *•.¸♥️¸.•*´*\nFeliz mes de las madres",""])
+    aleatorio = ""#choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴",""])
     
     return aleatorio

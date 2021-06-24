@@ -1,43 +1,49 @@
 ESTADO DE CUENTA
 
 Estudiante:
-XIMENA  PEREZ ARRIETA
+DYLLAN ALEJANDRO GRANADOS GENEY
 
 Conceptos y pagos:
 _______________________________
-'TRANSFERENCIA 🟢', '2020-12-04', '58,750', '0'
-_______________________________
 'MATRICULA 2021 🔴
 Plazo: 2020-12-05
-Valor a pagar: $446,000'
+Valor a pagar: $272,000'
+_______________________________
+'ICETEX 🟢', '2020-12-21', '170,950', '0'
 _______________________________
 'PENSIÓN FEB-21 🔴
 Plazo: 2021-02-05
-Valor a pagar: $204,000'
-_______________________________
-'TRANSFERENCIA 🟢', '2021-03-03', '200,000', '0'
+Valor a pagar: $148,000'
 _______________________________
 'PENSIÓN MAR-21 🔴
 Plazo: 2021-03-05
-Valor a pagar: $204,000'
+Valor a pagar: $148,000'
 _______________________________
-'TRANSFERENCIA 🟢', '2021-04-04', '400,000', '0'
+'PLATAFORMA 🔴
+Plazo: 2021-03-05
+Valor a pagar: $45,000'
 _______________________________
 'PENSIÓN ABR-21 🔴
 Plazo: 2021-04-05
-Valor a pagar: $204,000'
+Valor a pagar: $148,000'
 _______________________________
-'TRANSFERENCIA 🟢', '2021-04-06', '200,000', '0'
-_______________________________
-'TRANSFERENCIA 🟢', '2021-05-04', '400,000', '0'
+'TRANSFERENCIA 🟢', '2021-04-14', '296,000', '0'
 _______________________________
 'PENSIÓN MAY-21 🔴
 Plazo: 2021-05-05
-Valor a pagar: $204,000'
+Valor a pagar: $148,000'
+_______________________________
+'TRANSFERENCIA 🟢', '2021-05-14', '266,850', '0'
+_______________________________
+'PENSIÓN JUN-21 🔴
+Plazo: 2021-06-05
+Valor a pagar: $148,000'
+_______________________________
+'TRANSFERENCIA 🟢', '2021-06-16', '50,000', '0'
 
-Total a la fecha :         1,262,000 
-🟢 Pagado       :         1,258,750 
-🔴 Pendientes   :          3,250 
+Total a la fecha :         1,057,000 
+🟢 Pagado       :           783,800 
+🔴 Pendientes   :        273,200 
 
 Ir al siguiente link para acceder a los medios de pago: 
 /mediodepago
