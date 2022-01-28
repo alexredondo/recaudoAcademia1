@@ -1,49 +1,34 @@
 ESTADO DE CUENTA
 
 Estudiante:
-DYLLAN ALEJANDRO GRANADOS GENEY
+ORTEGA PEREZ DAVID ANDRES
 
-Conceptos y pagos:
-_______________________________
-'MATRICULA 2021 🔴
-Plazo: 2020-12-05
-Valor a pagar: $272,000'
-_______________________________
-'ICETEX 🟢', '2020-12-21', '170,950', '0'
-_______________________________
-'PENSIÓN FEB-21 🔴
-Plazo: 2021-02-05
-Valor a pagar: $148,000'
-_______________________________
-'PENSIÓN MAR-21 🔴
-Plazo: 2021-03-05
-Valor a pagar: $148,000'
-_______________________________
-'PLATAFORMA 🔴
-Plazo: 2021-03-05
-Valor a pagar: $45,000'
-_______________________________
-'PENSIÓN ABR-21 🔴
-Plazo: 2021-04-05
-Valor a pagar: $148,000'
-_______________________________
-'TRANSFERENCIA 🟢', '2021-04-14', '296,000', '0'
-_______________________________
-'PENSIÓN MAY-21 🔴
-Plazo: 2021-05-05
-Valor a pagar: $148,000'
-_______________________________
-'TRANSFERENCIA 🟢', '2021-05-14', '266,850', '0'
-_______________________________
-'PENSIÓN JUN-21 🔴
-Plazo: 2021-06-05
-Valor a pagar: $148,000'
-_______________________________
-'TRANSFERENCIA 🟢', '2021-06-16', '50,000', '0'
+Correo de recepción facturas DIAN: 
+nan
 
-Total a la fecha :         1,057,000 
-🟢 Pagado       :           783,800 
-🔴 Pendientes   :        273,200 
+Los costos educativos están en rojo 🔴 y los pagos realizados en verde 🟢:
+_______________________________
+'MATRICULA 🔴
+Plazo: 2021-12-06
+Valor a pagar: $320000'
+_______________________________
+'KIT LIBROS 🔴
+Plazo: 2021-12-06
+Valor a pagar: $401800'
+_______________________________
+'TRANSFERENCIA 🟢', '2021-12-09', '270000', '0'
+_______________________________
+'PREMATRICULA 🟢', '2021-12-09', '50000', '0'
+_______________________________
+'TRANSFERENCIA 🟢', '2022-01-27', '401800', '0'
+_______________________________
+'FEBRERO 🔴
+Plazo: 2022-02-05
+Valor a pagar: $196000'
+
+Total a la fecha :         917,800.0 
+🟢 Pagado       :         721,800.0 
+🔴 Pendientes   :      196,000.0 
 
 Ir al siguiente link para acceder a los medios de pago: 
 /mediodepago
