@@ -1,1 +1,1 @@
-bot: python3 \estadoCuenta\estadoCuentaBot.py
+bot: python3 estadoCuentaBot.py
