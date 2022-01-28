@@ -1,0 +1,9 @@
+Instrucciones para subir a github:
+
+git add *
+git commit -m "Comentario a la actualización"
+git remote add origin https://github.com/alexredondo/recaudoAcademia1
+git push -u origin master
+phrase: 12345
+
+Nota: con git push se actuliza el acceso.
