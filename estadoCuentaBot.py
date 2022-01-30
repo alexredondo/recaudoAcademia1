@@ -76,28 +76,10 @@ Seleccion la opción más adecuada: \n\n
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !\n
     Bienvenidos a nuestra escuela de padres.\n\n
-    *TABLA DE CONTENIDO*:\n
-    [Capítulo 1](https://telegra.ph/Dios-piensa-en-individuos-naciones-y-generaciones-01-30)*Mes de febrero*- Dios piensa en individuos, naciones y generaciones.""", parse_mode="markdown")
-    update.message.reply_text("""
-    [Capitulo2](https://telegra.ph/Titilo-02-22)* -Mes de marzo-* Dios instruye la familia y Sus leyes para ella.\n
-    
-    /capitulo3 -Mes de abril -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo4 -Mes de mayo -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo5 -Mes de junio -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo6 -Mes de julio -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo7 -Mes de agosto -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo8 -Mes de septiembre -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo9 -Mes de octubre -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-    /capitulo10 -Mes de noviembre -\n
-    Dios piensa en individuos, naciones y generaciones.\n
-""", parse_mode="markdown")
+    [Metodología]()\n""", parse_mode="markdown")
+
+    update.message.reply_text("""*TABLA DE CONTENIDO*:\n
+    [Leer la tabla de contenido](https://telegra.ph/Yo-también-11-08)""", parse_mode="markdown")
 
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
