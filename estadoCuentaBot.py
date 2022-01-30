@@ -76,27 +76,33 @@ Seleccion la opción más adecuada: \n\n
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !\n
     Bienvenidos a nuestra escuela de padres.\n\n
-    [Metodología](https://www.academia.net.co/2022/01/lo-que-dios-espera-de-nosotros-como.html)\n
-    /Capitulo 1""", parse_mode="markdown")
-
-    update.message.reply_text("""*TABLA DE CONTENIDO*:\n
-    [Leer la tabla de contenido](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)\n
-    [Capítulo 1](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)\n
-    Ir a
+    [Metodología](https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320)\n
     /tablacontenido
     /Capitulo1
     """, parse_mode="markdown")
 
-    update.message.reply_text("""Dios piensa en individuos, naciones y generaciones
-Dios instruye la familia y Sus leyes para ella
-¿Cuál es la base de la familia y su acción?
-Lo que deben hacer los padres
-Lo que no deben hacer los padres
-La edades que Dios nos dio en la vida
-Diseño diferente y complementario
-Educando en comodato
-Familias cristianas, naciones y generaciones en libertad
-Eligiendo una nueva familia
+# Tabla de contenido
+def tablacontenido_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""*TABLA DE CONTENIDO*:
+    1. Dios piensa en individuos, naciones y generaciones
+    2. Dios instruye la familia y Sus leyes para ella
+    3. ¿Cuál es la base de la familia y su acción?
+    4. Lo que deben hacer los padres
+    5. Lo que no deben hacer los padres
+    6. La edades que Dios nos dio en la vida
+    7. Diseño diferente y complementario
+    8. Educando en comodato
+    9. Familias cristianas, naciones y generaciones en libertad
+    10. Eligiendo una nueva familia
+    Ir a
+    /escuela
+    /capitulo1""", parse_mode="markdown")
+
+#Capitulo 1
+def capitulo1_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""*1. Dios piensa en individuos, naciones y generaciones*
+    [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
+    [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
     """, parse_mode="markdown")
 
 # Medios de pago /mediodepago
@@ -266,6 +272,8 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
+    dispatcher.add_handler(CommandHandler("escuela", tablacontenido_command))
+    dispatcher.add_handler(CommandHandler("capitulo1", capitulo1_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
 
 # comandos escuela de padres
