@@ -18,7 +18,9 @@ from telegram.ext import (
     CallbackContext,
 )
 
+# librerias propias
 import responses as R
+import link_pse as link_pse
 
 # Enable logging
 logging.basicConfig(
@@ -229,6 +231,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("certificados", certificados_command))
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
+    dispatcher.add_handler(CommandHandler("linkpse", link_pse.link_pse_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
 
 # Start the Bot
