@@ -77,10 +77,10 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !\n
     Bienvenidos a nuestra escuela de padres.\n\n
     *TABLA DE CONTENIDO*:\n
-    [Capítulo 1 - Dios piensa en individuos, naciones y generaciones.](https://telegra.ph/Dios-piensa-en-individuos-naciones-y-generaciones-01-30)\n
+    [Capítulo 1](https://telegra.ph/Dios-piensa-en-individuos-naciones-y-generaciones-01-30)*Mes de febrero*- Dios piensa en individuos, naciones y generaciones.\n
     \n
-    /capitulo2 -Mes de marzo -\n
-    Dios instruye la familia y Sus leyes para ella.
+    [Capitulo2](https://telegra.ph/Titilo-02-22)* -Mes de marzo-* Dios instruye la familia y Sus leyes para ella.\n
+    
     /capitulo3 -Mes de abril -\n
     Dios piensa en individuos, naciones y generaciones.\n
     /capitulo4 -Mes de mayo -\n
