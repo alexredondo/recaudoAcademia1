@@ -58,20 +58,8 @@ def sample_responses(input_text):
 
 # Medios de pago
     if user_message in ("medios de pago", "medio de pago"):
-        medio_de_pago = """
-Hola 🌺, si usted desea conocer los medios de pago vaya a /mediodepago\n 🏦 Estos son los medios de pagos disponibles para usted:\n\n
-*Opción* 1️⃣ : \nPara pagar por internet puede usar este : \n
-[link de pago por PSE]
-(https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=4510&searchedCategoryId=&searchedAgreementName=ACADEMIA%20DE%20LAS%20AMERICAS)\n
-*Opción* 2️⃣: \n
-1. Ir a la oficina *SERVICER* que le quede más cerca. \n
-2. Suministra el número del convenio *15754127* \n
-3. Suministra el NUIP del estudiante. _(Registro civil o Tarjeta de identidad)_ \n\n
-*Opción* 3️⃣: \n
-1. Ir a la sucursal del *BANCO CAJA SOCIAL*. \n
-2. Suministra el número del convenio *15754127* \n
-3. Suministra el NUIP del estudiante. _(Registro civil o Tarjeta de identidad)_
-"""
+        medio_de_pago = """\n
+Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         return medio_de_pago
 
 # Pago por pse

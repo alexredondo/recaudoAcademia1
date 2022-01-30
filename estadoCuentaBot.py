@@ -50,16 +50,16 @@ def boton_command(update: Update, _: CallbackContext):
 
 
 def start_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Un saludo de paz de parte de Academia de las Américas.\n!"
-    *Dios* es el principio y en estamos completos por Él esto es la *PAZ*: 
-    el orden, la belleza y el bienestar en nuestros corazones y al rededor nuestro.""", parse_mode="markdown")
+    update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.\n"
+    *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*: 
+    El orden, la belleza y el bienestar en nuestros corazones y alrededor nuestro.""", parse_mode="markdown")
 
 # Comando para consultar el ID del estudiante
 def consulta_id_chat_command(update: Update, _: CallbackContext):
 #    update.message.reply_text(f'*Hello* {update.effective_user.first_name}\n{update.effective_user.last_name}\n{update.effective_user.id}\n{update.effective_user.username}', parse_mode="markdown")
 #    update.message.reply_text(f'*Hello* {update.effective_chat.id}',parse_mode="markdown")
-    update.message.reply_text("""Este es el *ID* que lo identifica en *Academia de las Américas*: \n\n"+str(update.effective_chat.id)+"\n\n
-    Por favor no lo comparta.""",parse_mode="markdown")
+    update.message.reply_text("Este es el *ID* que lo identifica en *Academia de las Américas*: \n\n" +str(update.effective_chat.id)+"\n\n
+    "Por favor no lo comparta.",parse_mode="markdown")
 
 # Comando de ayuda /ayuda
 def help_command(update: Update, _: CallbackContext):
@@ -224,7 +224,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("boton", boton_command)) #probando botón
     dispatcher.add_handler(CommandHandler("id", consulta_id_chat_command))
     dispatcher.add_handler(CommandHandler("start", start_command))
-    dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("ayuda", help_command))
     dispatcher.add_handler(CommandHandler("mediodepago", mediodepago_command))
     dispatcher.add_handler(CommandHandler("certificados", certificados_command))
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
