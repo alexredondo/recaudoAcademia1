@@ -20,7 +20,6 @@ from telegram.ext import (
 
 # librerias propias
 import responses as R
-import link_pse as link_pse
 
 # Enable logging
 logging.basicConfig(
@@ -29,8 +28,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-#Probando botón
-
+# Probando botón
 def boton_command(update: Update, _: CallbackContext):
     # Configuración de los botones
     button1 = InlineKeyboardButton(
@@ -50,7 +48,7 @@ def boton_command(update: Update, _: CallbackContext):
         ])
     )
 
-
+# comando de inicio
 def start_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.\n"
     *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*: 
@@ -72,6 +70,33 @@ Seleccion la opción más adecuada: \n\n
 🔹 Certificados: /certificados \n
 🔹 Horarios: /horarios\n
 🔹 Puede escribirle al director @alexredondo
+""", parse_mode="markdown")
+
+# Escuela de padres
+def escuelapadres_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""Hola !\n
+    Esta es nuestra escuela de padres.
+    Tabla de contenido de la Escuela:
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n
+    /capitulo1\n
+    Dios piensa en individuos, naciones y generaciones.\n\n    
 """, parse_mode="markdown")
 
 # Medios de pago /mediodepago
@@ -223,6 +248,8 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     f = open("recaudoText7.txt","r", encoding="utf-8")
     update.message.reply_text(f.read())
 
+
+# código de sistema
 def main() -> None:
     # Create the Updater and pass it your bot's token.
     updater = Updater("1673996388:AAG1LqRgDPaAiGDlA0He8c-SQD8sihLgbaA")
