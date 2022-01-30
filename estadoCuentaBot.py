@@ -74,28 +74,28 @@ Seleccion la opción más adecuada: \n\n
 
 # Escuela de padres
 def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Hola !\n
-    Esta es nuestra escuela de padres.
-    Tabla de contenido de la Escuela:
-    /capitulo1\n
+    update.message.reply_text("""Cordial saludo familia !\n
+    Bienvenidos a nuestra escuela de padres.\n\n
+    *TABLA DE CONTENIDO*:\n
+    /capitulo1 -mes de febrero {year} -\n
+    Dios piensa en individuos, naciones y generaciones.\n
+    /capitulo2 -Mes de marzo -\n
+    Dios instruye la familia y Sus leyes para ella.
+    /capitulo3 -Mes de abril -\n
+    Dios piensa en individuos, naciones y generaciones.\n
+    /capitulo4 -Mes de mayo -\n
+    Dios piensa en individuos, naciones y generaciones.\n
+    /capitulo5 -Mes de junio -\n
     Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
-    Dios piensa en individuos, naciones y generaciones.
-    /capitulo1\n
+    /capitulo6 -Mes de julio -\n
     Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
+    /capitulo7 -Mes de agosto -\n
     Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
+    /capitulo8 -Mes de septiembre -\n
     Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
+    /capitulo9 -Mes de octubre -\n
     Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
-    Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
-    Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
-    Dios piensa en individuos, naciones y generaciones.\n\n
-    /capitulo1\n
+    /capitulo10 -Mes de noviembre -\n
     Dios piensa en individuos, naciones y generaciones.\n\n    
 """, parse_mode="markdown")
 
@@ -267,6 +267,9 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
+
+# comandos escuela de padres
+    dispatcher.add_handler(CommandHandler("capitulo1", link_pse_command))
 
 # Start the Bot
     updater.start_polling()
