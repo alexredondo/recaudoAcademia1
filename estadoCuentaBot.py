@@ -76,10 +76,28 @@ Seleccion la opción más adecuada: \n\n
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !\n
     Bienvenidos a nuestra escuela de padres.\n\n
-    [Metodología](https://www.academia.net.co/2022/01/lo-que-dios-espera-de-nosotros-como.html)\n""", parse_mode="markdown")
+    [Metodología](https://www.academia.net.co/2022/01/lo-que-dios-espera-de-nosotros-como.html)\n
+    /Capitulo 1""", parse_mode="markdown")
 
     update.message.reply_text("""*TABLA DE CONTENIDO*:\n
-    [Leer la tabla de contenido](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)""", parse_mode="markdown")
+    [Leer la tabla de contenido](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)\n
+    [Capítulo 1](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)\n
+    Ir a
+    /tablacontenido
+    /Capitulo1
+    """, parse_mode="markdown")
+
+    update.message.reply_text("""Dios piensa en individuos, naciones y generaciones
+Dios instruye la familia y Sus leyes para ella
+¿Cuál es la base de la familia y su acción?
+Lo que deben hacer los padres
+Lo que no deben hacer los padres
+La edades que Dios nos dio en la vida
+Diseño diferente y complementario
+Educando en comodato
+Familias cristianas, naciones y generaciones en libertad
+Eligiendo una nueva familia
+    """, parse_mode="markdown")
 
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
