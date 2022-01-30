@@ -76,10 +76,10 @@ Seleccion la opción más adecuada: \n\n
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !\n
     Bienvenidos a nuestra escuela de padres.\n\n
-    [Metodología]()\n""", parse_mode="markdown")
+    [Metodología](https://www.academia.net.co/2022/01/lo-que-dios-espera-de-nosotros-como.html)\n""", parse_mode="markdown")
 
     update.message.reply_text("""*TABLA DE CONTENIDO*:\n
-    [Leer la tabla de contenido](https://www.academia.net.co/2019/04/descubre-los-10-beneficios-de-ser-una.html)""", parse_mode="markdown")
+    [Leer la tabla de contenido](https://www.academia.net.co/2022/01/tabla-de-contenido-lo-que-dios-espera.html)""", parse_mode="markdown")
 
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
