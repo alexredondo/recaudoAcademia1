@@ -60,8 +60,7 @@ def start_command(update: Update, _: CallbackContext):
 def consulta_id_chat_command(update: Update, _: CallbackContext):
 #    update.message.reply_text(f'*Hello* {update.effective_user.first_name}\n{update.effective_user.last_name}\n{update.effective_user.id}\n{update.effective_user.username}', parse_mode="markdown")
 #    update.message.reply_text(f'*Hello* {update.effective_chat.id}',parse_mode="markdown")
-    update.message.reply_text("Este es el *ID* que lo identifica en *Academia de las Américas*: \n\n" +str(update.effective_chat.id)+"\n\n
-    "Por favor no lo comparta.",parse_mode="markdown")
+    update.message.reply_text("Este es el *ID* que lo identifica en *Academia de las Américas*: \n\n" +str(update.effective_chat.id)+"\n\n"+"Por favor no lo comparta.",parse_mode="markdown")
 
 # Comando de ayuda /ayuda
 def help_command(update: Update, _: CallbackContext):
