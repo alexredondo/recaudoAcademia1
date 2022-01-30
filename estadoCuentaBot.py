@@ -90,6 +90,13 @@ def mediodepago_command(update: Update, _: CallbackContext):
 3. Suministra el NUIP del estudiante. (Registro civil o Tarjeta de identidad)
 """, parse_mode="markdown")
 
+# Link de pagos por pse
+def link_pse_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""\n\n
+    🏦 Para pagar por internet puede usar este : \n
+    [link de pago por PSE](https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=4510&searchedCategoryId=&searchedAgreementName=ACADEMIA%20DE%20LAS%20AMERICAS)"""
+        , parse_mode="markdown")
+
 # certificados
 def certificados_command(update: Update, _: CallbackContext):
     update.message.reply_text("📃 Los certificados tienen un plazo de *dos días hábiles*.\nValor: $9.500 cada uno. \n\n 📃📃 El observador del estudiante, *cinco días hábiles*.\nValor: $17.600", parse_mode="markdown")
@@ -230,7 +237,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("certificados", certificados_command))
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
-    dispatcher.add_handler(CommandHandler("linkpse", link_pse.link_pse_command))
+    dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
 
 # Start the Bot
