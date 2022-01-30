@@ -79,7 +79,7 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     [Metodología]()\n""", parse_mode="markdown")
 
     update.message.reply_text("""*TABLA DE CONTENIDO*:\n
-    [Leer la tabla de contenido](https://telegra.ph/Yo-también-11-08)""", parse_mode="markdown")
+    [Leer la tabla de contenido](https://www.academia.net.co/2019/04/descubre-los-10-beneficios-de-ser-una.html)""", parse_mode="markdown")
 
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
