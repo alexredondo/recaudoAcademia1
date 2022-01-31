@@ -74,8 +74,8 @@ Seleccion la opción más adecuada: \n\n
 
 # Escuela de padres
 def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Cordial saludo familia !\n
-    Bienvenidos a nuestra escuela de padres.\n\n
+    update.message.reply_text("""Cordial saludo familia !
+    🤝Bienvenidos a nuestra escuela de padres.\n
     [Metodología](https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320)\n
     /tablacontenido
     /Capitulo1
@@ -100,10 +100,13 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 
 #Capitulo 1
 def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""*1. Dios piensa en individuos, naciones y generaciones*
+    update.message.reply_text("""Muy bien comencemos con la primera clase:
+    *1. Dios piensa en individuos, naciones y generaciones*
     [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
     [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-    """, parse_mode="markdown")
+    Ir a
+    /tablacontenido
+    /capitulo2""", parse_mode="markdown")
 
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
@@ -272,7 +275,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
-    dispatcher.add_handler(CommandHandler("escuela", tablacontenido_command))
+    dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("capitulo1", capitulo1_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
 
