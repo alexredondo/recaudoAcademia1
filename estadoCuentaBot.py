@@ -224,7 +224,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 ############# ESCUELA DE PADRES #################
 # Escuela de padres
 def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Cordial saludo familia !
+    update.message.reply_text("""Cordial saludo familia !\n
     🤝Bienvenidos a nuestra escuela de padres.\n
     *Metodología*
     1. Leer cada capítulo de libro
@@ -233,7 +233,7 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     4. Recordar las ideas fundacionales
     
     ▶️ /tablacontenido""", parse_mode="markdown")
-    update.message.send_photo(update.message.chat.id, "https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320")
+  
 
 # Tabla de contenido
 def tablacontenido_command(update: Update, _: CallbackContext):
