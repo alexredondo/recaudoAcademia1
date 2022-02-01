@@ -274,12 +274,10 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
-    dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
-
-# comandos escuela de padres
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("capitulo1", capitulo1_command))
+    dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
     
 # Start the Bot
     updater.start_polling()
