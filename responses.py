@@ -64,9 +64,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 # Pago por pse
     if user_message in ("pago por internet", "pago por pse", "pse","pagar por pse"):
-        pago_pse = """\n\n
-    🏦 Para pagar por internet puede usar este : \n
-    [link de pago por PSE](https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=4510&searchedCategoryId=&searchedAgreementName=ACADEMIA%20DE%20LAS%20AMERICAS)"""
+        pago_pse = "🏦 Por favor vaya a : \n /mediodepago"
         return pago_pse
 
 #Evidencia pago    
