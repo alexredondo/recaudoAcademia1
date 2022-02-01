@@ -230,22 +230,22 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     1. Leer cada capítulo de libro
     2. Ver el vídeo
     3. Resolver el cuestionario
-    4. Recordar las ideas fundacionales""")
+    4. Recordar las ideas fundacionales""", parse_mode="markdown")
     update.message.send_photo(update.message.chat.id, "https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320")
 
 # Tabla de contenido
 def tablacontenido_command(update: Update, _: CallbackContext):
     update.message.reply_text("""*TABLA DE CONTENIDO*:
     /cap1 Dios piensa en individuos, naciones y generaciones
-    /cap1 Dios instruye la familia y Sus leyes para ella
-    /cap1 ¿Cuál es la base de la familia y su acción?
-    /cap1 Lo que deben hacer los padres
-    /cap1 Lo que no deben hacer los padres
-    /cap1 La edades que Dios nos dio en la vida
-    /cap1 Diseño diferente y complementario
-    /cap1 Educando en comodato
-    /cap1 Familias cristianas, naciones y generaciones en libertad
-    /cap1 Eligiendo una nueva familia
+    /cap2 Dios instruye la familia y Sus leyes para ella
+    /cap3 ¿Cuál es la base de la familia y su acción?
+    /cap4 Lo que deben hacer los padres
+    /cap5 Lo que no deben hacer los padres
+    /cap6 La edades que Dios nos dio en la vida
+    /cap7 Diseño diferente y complementario
+    /cap8 Educando en comodato
+    /cap9 Familias cristianas, naciones y generaciones en libertad
+    /cap10 Eligiendo una nueva familia
     Ir a /escuela""", parse_mode="markdown")
 
 #Capitulo 1
