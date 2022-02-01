@@ -50,7 +50,7 @@ def sample_responses(input_text):
         return escuela_padre
 
 #Emojis
-    intent_emoji = ("👏👏","excelente","⭐️⭐️","👍👍")
+    intent_emoji = ("👏👏👏","⭐️⭐️⭐️","👍👍👍")
     for emoji in intent_emoji:
         aleatorio_emocion_emoji = choice(["Maravilloso 🌺","Genial 🌻","Me gusta 🌷"])
         if re.search(emoji, user_message) is not None:
