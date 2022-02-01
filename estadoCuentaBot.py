@@ -72,42 +72,6 @@ Seleccion la opción más adecuada: \n\n
 🔹 Puede escribirle al director @alexredondo
 """, parse_mode="markdown")
 
-# Escuela de padres
-def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Cordial saludo familia !
-    🤝Bienvenidos a nuestra escuela de padres.\n
-    [Metodología](https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320)\n
-    /tablacontenido
-    /Capitulo1
-    """, parse_mode="markdown")
-
-# Tabla de contenido
-def tablacontenido_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""*TABLA DE CONTENIDO*:
-    1. Dios piensa en individuos, naciones y generaciones
-    2. Dios instruye la familia y Sus leyes para ella
-    3. ¿Cuál es la base de la familia y su acción?
-    4. Lo que deben hacer los padres
-    5. Lo que no deben hacer los padres
-    6. La edades que Dios nos dio en la vida
-    7. Diseño diferente y complementario
-    8. Educando en comodato
-    9. Familias cristianas, naciones y generaciones en libertad
-    10. Eligiendo una nueva familia
-    Ir a
-    /escuela
-    /capitulo1""", parse_mode="markdown")
-
-#Capitulo 1
-def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Muy bien comencemos con la primera clase:
-    *1. Dios piensa en individuos, naciones y generaciones*
-    [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
-    [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-    Ir a
-    /tablacontenido
-    /capitulo2""", parse_mode="markdown")
-
 # Medios de pago /mediodepago
 def mediodepago_command(update: Update, _: CallbackContext):                   
     update.message.reply_text("""
@@ -257,6 +221,42 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     f = open("recaudoText7.txt","r", encoding="utf-8")
     update.message.reply_text(f.read())
 
+############# ESCUELA DE PADRES #################
+# Escuela de padres
+def escuelapadres_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""Cordial saludo familia !
+    🤝Bienvenidos a nuestra escuela de padres.\n
+    [Metodología](https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320)\n
+    /tablacontenido
+    /Capitulo1
+    """, parse_mode="markdown")
+
+# Tabla de contenido
+def tablacontenido_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""*TABLA DE CONTENIDO*:
+    1. Dios piensa en individuos, naciones y generaciones
+    2. Dios instruye la familia y Sus leyes para ella
+    3. ¿Cuál es la base de la familia y su acción?
+    4. Lo que deben hacer los padres
+    5. Lo que no deben hacer los padres
+    6. La edades que Dios nos dio en la vida
+    7. Diseño diferente y complementario
+    8. Educando en comodato
+    9. Familias cristianas, naciones y generaciones en libertad
+    10. Eligiendo una nueva familia
+    Ir a
+    /escuela
+    /capitulo1""", parse_mode="markdown")
+
+#Capitulo 1
+def capitulo1_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""Muy bien comencemos con la primera clase:
+    *1. Dios piensa en individuos, naciones y generaciones*
+    [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
+    [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
+    Ir a
+    /tablacontenido
+    /capitulo2""", parse_mode="markdown")
 
 # código de sistema
 def main() -> None:
@@ -274,14 +274,13 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
-    dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
-    dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
-    dispatcher.add_handler(CommandHandler("capitulo1", capitulo1_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
 
 # comandos escuela de padres
-    dispatcher.add_handler(CommandHandler("capitulo1", link_pse_command))
-
+    dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
+    dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
+    dispatcher.add_handler(CommandHandler("capitulo1", capitulo1_command))
+    
 # Start the Bot
     updater.start_polling()
     print("Bot started")
