@@ -252,12 +252,12 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 
 #Capitulo 1
 def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Muy bien comencemos con la primera clase:
-    *1️⃣ Dios piensa en individuos, naciones y generaciones*
-    📺 [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)|📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-
+    update.message.reply_text("""*1️⃣ Dios piensa en individuos, naciones y generaciones*\n
+    📺 [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
+    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
+    ▶️ [Encuentro](https://www.youtube.com/watch?v=JQCiqKQT1t8)
     ▶️ /tablacontenido
-    ⏫ /escuela""", parse_mode="markdown")
+    ▶️ /escuela""", parse_mode="markdown")
 
 # código de sistema
 def main() -> None:
