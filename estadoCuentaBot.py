@@ -50,8 +50,8 @@ def boton_command(update: Update, _: CallbackContext):
 
 # comando de inicio
 def start_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.\n"
-    *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*: 
+    update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.
+    *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*:
     El orden, la belleza y el bienestar en nuestros corazones y alrededor nuestro.""", parse_mode="markdown")
 
 # Comando para consultar el ID del estudiante
