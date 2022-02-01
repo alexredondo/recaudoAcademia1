@@ -226,10 +226,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Cordial saludo familia !
     🤝Bienvenidos a nuestra escuela de padres.\n
-    [Metodología](https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320)\n
-    /tablacontenido
-    /Capitulo1
-    """, parse_mode="markdown")
+    update.message.send_photo("https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320")
 
 # Tabla de contenido
 def tablacontenido_command(update: Update, _: CallbackContext):
