@@ -45,9 +45,10 @@ def sample_responses(input_text):
 #            return aleatorio_saludo_formal
 
 #Escuela de padres
-    if user_message in ("escuela de padres", "escuela padres"):
-        escuela_padre = "👋 Por favor vaya a : \n /escuela"
-        return escuela_padre
+    intent_escuela_padres = ("escuela de padres", "escuela padres")
+    for x in escuela_padres:
+        if re.search(x, user_message) is not None:
+            return "👋 Por favor vaya a : \n /escuela"
 
 #Emojis
     intent_emoji = ("👏👏👏","⭐️⭐️⭐️","👍👍👍")
@@ -153,11 +154,6 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         #apertura del archivo para impresión
         f = open("list_student_text_3.txt", "r", encoding="utf-8")
         return "*LISTA DE ESTUDIANTES*\n"+"Cantidad: "+"*"+str(len(list_student.index))+"*"+"\n"+f.read() # imprime
-
-# Genera horario
-    if user_message in ("horario primero", "horario 1"):  # solicitud del usuario
-        link_horario = "https://telegra.ph/First-Class-Schedule-01-27\n\n  La hora de entrada: 6:20 am\nLa hora de salida: 1:10 pm"
-        return link_horario
 
 # Lista de estudiantes que se le entrega el kit
     if user_message in ("kitsi","kit si"):  # solicitud del usuario
