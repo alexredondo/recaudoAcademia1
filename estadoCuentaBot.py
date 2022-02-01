@@ -230,7 +230,9 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     1. Leer cada capítulo de libro
     2. Ver el vídeo
     3. Resolver el cuestionario
-    4. Recordar las ideas fundacionales""", parse_mode="markdown")
+    4. Recordar las ideas fundacionales
+    
+    ▶️ /tablacontenido""", parse_mode="markdown")
     update.message.send_photo(update.message.chat.id, "https://blogger.googleusercontent.com/img/a/AVvXsEg4UcOJE1-n-GSIyCxLw5YYG3vlwBnUHKDEKv1C8q77Xm4Qya8OpuxEB4zHfUqmx5yxmHuK-UYG0LjxYsf6cUQHBrwBuDF3blpClEAavTt173altNo52x6bcUzzI37sFOZECqHiD6JXEbeHZBIIXZW_eZtgSw_cxoeglEum19LsEG00Tjh_dBWnz14xuw=w215-h320")
 
 # Tabla de contenido
@@ -252,9 +254,8 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 def capitulo1_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Muy bien comencemos con la primera clase:
     *1️⃣ Dios piensa en individuos, naciones y generaciones*
-    📺 [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
-    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-    *Ir a*
+    📺 [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)|📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
+
     ▶️ /tablacontenido
     ⏫ /escuela""", parse_mode="markdown")
 
