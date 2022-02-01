@@ -44,6 +44,11 @@ def sample_responses(input_text):
 #        if re.search(saludo, user_message) is not None:
 #            return aleatorio_saludo_formal
 
+#Escuela de padres
+    if user_message in ("escuela de padres", "escuela padres"):
+        escuela_padre = "👋 Por favor vaya a : \n /escuela"
+        return escuela_padre
+
 #Emojis
     intent_emoji = ("👏👏","excelente","⭐️⭐️","👍👍")
     for emoji in intent_emoji:
