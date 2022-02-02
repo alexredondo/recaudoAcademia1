@@ -46,7 +46,7 @@ def sample_responses(input_text):
 
 #Escuela de padres
     intent_escuela_padres = ("escuela de padres", "escuela padres")
-    for x in escuela_padres:
+    for x in intent_escuela_padres:
         if re.search(x, user_message) is not None:
             return "👋 Por favor vaya a : \n /escuela"
 
