@@ -72,8 +72,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 # Pago por pse
     intent_pagopse = ("pago por internet", "pago por pse", "pse","pagar por pse")
     for x in intent_pagopse:
-    if re.search(x, user_message) is not None:
-        return "🏦 Por favor vaya a : \n /mediodepago"
+    	if re.search(x, user_message) is not None:
+        	return "🏦 Por favor vaya a : \n /mediodepago"
 
 #Evidencia pago    
     if user_message in ("👍*","👍**"):
