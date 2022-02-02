@@ -97,7 +97,7 @@ def link_pse_command(update: Update, _: CallbackContext):
 
 # certificados
 def certificados_command(update: Update, _: CallbackContext):
-    update.message.reply_text("Específique por este medio el tipo de certificado que necesita.\n TEnga en cuenta el plazo para la entrega, parse_mode="markdown")
+    update.message.reply_text("Específique por este medio el tipo de certificado que necesita.\n TEnga en cuenta el plazo para la entrega", parse_mode="markdown")
     update.message.reply_text("📃 Los certificados tienen un plazo de *dos días hábiles*.\nValor: $9.500 cada uno. \n\n 📃📃 El observador del estudiante, *cinco días hábiles*.\nValor: $17.600", parse_mode="markdown")
     update.message.reply_text("""\n\n
     🏦 Para pagar el certificado por internet puede usar este : \n
