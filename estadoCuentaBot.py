@@ -97,8 +97,14 @@ def link_pse_command(update: Update, _: CallbackContext):
 
 # certificados
 def certificados_command(update: Update, _: CallbackContext):
+    update.message.reply_text("Específique por este medio el tipo de certificado que necesita.\n TEnga en cuenta el plazo para la entrega, parse_mode="markdown")
     update.message.reply_text("📃 Los certificados tienen un plazo de *dos días hábiles*.\nValor: $9.500 cada uno. \n\n 📃📃 El observador del estudiante, *cinco días hábiles*.\nValor: $17.600", parse_mode="markdown")
-
+    update.message.reply_text("""\n\n
+    🏦 Para pagar el certificado por internet puede usar este : \n
+    [link de pago por PSE](https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=4510&searchedCategoryId=&searchedAgreementName=ACADEMIA%20DE%20LAS%20AMERICAS)\n
+    Usar otros /mediodepago"""
+        , parse_mode="markdown")
+                              
 # horarios
 def horarios_command(update: Update, _: CallbackContext):
     update.message.reply_text("*Horarios de clases*\n\n1️⃣[Primero](https://www.academia.net.co/p/horario-primero-2021.html)\n\n2️⃣[Segundo](https://www.academia.net.co/p/horario-segundo-2021.html)\n\n3️⃣[Tercero](https://www.academia.net.co/p/horario-tercero.html)\n\n4️⃣[Cuarto](https://www.academia.net.co/p/horario-cuarto.html)\n\n5️⃣[Quinto](https://www.academia.net.co/p/horario-quinto-2021.html)\n\n", parse_mode="markdown")
