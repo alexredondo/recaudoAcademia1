@@ -98,7 +98,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
             return  "Si necesita información sobre su estado de cuenta por favor ingrese a este link: \n\n   /cuenta"
 
 #Solicitud estado de Cuenta
-    intent_certificado = ("estado de cuenta","cuánto debo")
+    intent_certificado = ("certificado","necesito un certificado", "necesito unos certificados", "necesito el observador")
     for x in intent_certificado:
         if re.search(x, user_message) is not None:
             return  "Si necesita información sobre certificados por favor ingrese a este link: \n\n   /certificados"
