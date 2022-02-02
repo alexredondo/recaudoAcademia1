@@ -63,9 +63,11 @@ def sample_responses(input_text):
         return aleatorio_gracias
 
 #enfermo
-    if user_message in ("okm","🙏*","🙏**"):
+    intent_enfermo = ("🙏*","🙏**","amaneció enfermo","amaneció con gripa", "amaneció con fiebre")
+    for enfermo in intent_enfermo:	
         aleatorio_enfermo = choice(["🌻 El Señor alejará de ti toda enfermedad. Deut. 7:15","🌺 He escuchado tu oración, y he visto tus lágrimas. Te voy a devolver la salud... 2 Reyes 20:5","🌼 Cuando esté enfermo, el Señor lo sustentará; suavizará sus males mientras recobra la salud. Salmo 41:3-4","💐 Él sana a los de corazón quebrantado y les venda las heridas. Salmo 147:3","🌺 Él perdona todos mis pecados y sana todas mis enfermedades. Me redime de la muerte y me corona de amor y tiernas misericordias. Salmo 103:3-4","🌼 Oh Señor mi Dios, clamé a ti por ayuda, y me devolviste la salud. Salmo 30:2","🌻 —Iré a sanarlo—dijo Jesús. Mateo 8:7","💐 Él mismo cargó nuestros pecados sobre su cuerpo en la cruz, para que nosotros podamos estar muertos al pecado y vivir para lo que es recto. Por sus heridas, ustedes son sanados. 1 Pedro 2:24"])
-        return aleatorio_enfermo
+        if re.search(enfermo, user_message) is not None:
+	    return aleatorio_enfermo
 
 #Medios de pago
     intent_estadocuenta = ("medios de pago", "medio de pago")
