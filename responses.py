@@ -95,8 +95,15 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
         if re.search(solicitud_estado_cuenta, user_message) is not None:
     
-            return  "por favor ingrese a este link: \n\n   /cuenta"
+            return  "Si necesita información sobre su estado de cuenta por favor ingrese a este link: \n\n   /cuenta"
 
+#Solicitud estado de Cuenta
+    intent_certificado = ("estado de cuenta","cuánto debo")
+    for x in intent_certificado:
+        if re.search(x, user_message) is not None:
+            return  "Si necesita información sobre certificados por favor ingrese a este link: \n\n   /certificados"
+
+###### GENERA LISTADOS ######
 # Función que genera listados
     def genera_lista():
         f = open("list_student.txt","w", encoding="utf-8") #Se crea y se abre el archivo de texto donde se almacenarán los datos. De manera escribible "w"
@@ -188,10 +195,9 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 🇺🇸 Inglés con enfoque comunicativo. \n
 🎥 Supervisión permanente con cámaras de seguridad.\n
 ❄️ Aulas Climatizadas.\n
-🌱 Próximamente sede campestre.
+🌱 Próximamente sede campestre.""" 
 
-[Link](www.academia.edu.co)"""  # imprime
-#Estado de cuenta
+# imprime estado de cuenta
     if user_message in ["1001368730091","566823099","740479597","774961259","752044425","594244247","1001278091682","734477373","611306758","1001264500088","510276625","560957978","790584346","587492183","633478750","662072738","710900500","698079942","732978397","723545874","1001338979168","1001266243352","1001445422887","563619371","1001470298709","545054499","1001211791436","581778935","1001221364964","756678131","439651001","676845958","1001274258420","612122202","1001167380937","637490155","672121967","422965172","640252592","599226510","1001302901969","528328293","776155007","1001267993107","477108352","1001410910756","1001283899591","757466026","1001495905419","599089927","748250659","623339134","1001440528243","748183480","568864068","1001196292071","501580454","1001207414865","752083719","545183138","1076512291","451366432","1001189318617"]:
         recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=1830933640&single=true&output=csv')
         id_est=int(user_message)
