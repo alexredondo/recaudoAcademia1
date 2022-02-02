@@ -62,16 +62,18 @@ def sample_responses(input_text):
         aleatorio_gracias = choice(["🧡💚💙❤️","🟠🟢🔵🔴","Wonderfull 💫","Genial 👌🏽","Me gusta 👍🏽","Maravilloso 🌺","🌼","🌻","💐"])
         return aleatorio_gracias
 
-# Medios de pago
-    if user_message in ("medios de pago", "medio de pago"):
-        medio_de_pago = """\n
+#Medios de pago
+    intent_estadocuenta = ("medios de pago", "medio de pago")
+    for x in intent_estadocuenta:
+        if re.search(x, user_message) is not None:
+            return """\n
 Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
-        return medio_de_pago
 
 # Pago por pse
-    if user_message in ("pago por internet", "pago por pse", "pse","pagar por pse"):
-        pago_pse = "🏦 Por favor vaya a : \n /mediodepago"
-        return pago_pse
+    intent_pagopse = ("pago por internet", "pago por pse", "pse","pagar por pse")
+    for x in intent_pagopse:
+    if re.search(x, user_message) is not None:
+        return "🏦 Por favor vaya a : \n /mediodepago"
 
 #Evidencia pago    
     if user_message in ("👍*","👍**"):
