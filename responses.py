@@ -92,14 +92,18 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 #Solicitud estado de Cuenta
     intent_estado_cuenta = ("estado de cuenta","cuánto debo")
-
     for solicitud_estado_cuenta in intent_estado_cuenta:
-
-        if re.search(solicitud_estado_cuenta, user_message) is not None:
-    
+        if re.search(solicitud_estado_cuenta, user_message) is not None:    
             return  "Si necesita información sobre su estado de cuenta por favor ingrese a este link: \n\n   /cuenta"
 
-#Solicitud estado de Cuenta
+#enfermo
+    intent_enfermo = ("🙏*","🙏**","amaneció enfermo","amaneció con gripa", "amaneció con fiebre")
+    for x in intent_enfermo:	
+        aleatorio_enfermo = choice(["🌻 El Señor alejará de ti toda enfermedad. Deut. 7:15","🌺 He escuchado tu oración, y he visto tus lágrimas. Te voy a devolver la salud... 2 Reyes 20:5","🌼 Cuando esté enfermo, el Señor lo sustentará; suavizará sus males mientras recobra la salud. Salmo 41:3-4","💐 Él sana a los de corazón quebrantado y les venda las heridas. Salmo 147:3","🌺 Él perdona todos mis pecados y sana todas mis enfermedades. Me redime de la muerte y me corona de amor y tiernas misericordias. Salmo 103:3-4","🌼 Oh Señor mi Dios, clamé a ti por ayuda, y me devolviste la salud. Salmo 30:2","🌻 —Iré a sanarlo—dijo Jesús. Mateo 8:7","💐 Él mismo cargó nuestros pecados sobre su cuerpo en la cruz, para que nosotros podamos estar muertos al pecado y vivir para lo que es recto. Por sus heridas, ustedes son sanados. 1 Pedro 2:24"])
+        if re.search(x, user_message) is not None:
+            return aleatorio_enfermo
+
+#Solicitud certificado
     intent_certificado = ("certificado","necesito un certificado", "necesito unos certificados", "necesito el observador")
     for x in intent_certificado:
         if re.search(x, user_message) is not None:
