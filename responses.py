@@ -62,6 +62,14 @@ def sample_responses(input_text):
         aleatorio_gracias = choice(["🧡💚💙❤️","🟠🟢🔵🔴","Wonderfull 💫","Genial 👌🏽","Me gusta 👍🏽","Maravilloso 🌺","🌼","🌻","💐"])
         return aleatorio_gracias
 
+#prueba
+    intent_p = ("prueba a","prueba b")
+    for emoji in intent_p:
+        aleatorio_p = choice(["Maravilloso 🌺","Genial 🌻","Me gusta 🌷"])
+        if re.search(emoji, user_message) is not None:
+            return aleatorio_p
+
+
 #enfermo
     intent_enfermo = ("🙏*","🙏**","amaneció enfermo","amaneció con gripa", "amaneció con fiebre")
     for x in intent_enfermo:	
