@@ -339,12 +339,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         registro = open("lista_teachers.txt","r", encoding="utf-8")
         f = open("lista_teachers_1.txt","w", encoding="utf-8")
         for x in registro:
-            xf = x #.replace("[¿]","")
-
-		
-  #transTable = txt.maketrans("aeiou", "AEIOU", "xyz")
-  #txt = txt.translate(transTable)
-	
+            transTable = x.maketrans(",", ">>", "[]'")
+            xf = x.translate(transTable)
             f.write(xf)		
         f.close()
 
