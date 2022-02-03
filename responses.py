@@ -327,8 +327,14 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
             json.dump(parsed,f, indent=4)
 
         with open ('lista_teachers.json','r', encoding="utf-8") as f:
-            recaudo_json =json.load(f)
+            lista_json =json.load(f)
+	
+        for i in range(len(lista_json["data"])):
+            print (lista_json["data"][i])
 
+            with open ('lista_teachers.txt','a', encoding="utf-8") as f:
+                f.write(str(lista_json["data"][i])+'\n')
+	f.close()
 #        registro=open("recaudo.txt","r", encoding="utf-8")
 #        f = open("recaudoText.txt","w", encoding="utf-8")
 #        for x in registro:
