@@ -311,6 +311,36 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f = open("recaudoText7.txt","r", encoding="utf-8") 
         return f.read()
 
+### LISTA DOCENTES ###
+
+    if user_message in ["teacher_list"]:
+        lista_teachers = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vToYFmQPyJzsYhfu7pCrXWrjmGE346tA-i9XNOQbr8anQ5ItWUk0C8UcLj26gQZujc9paPhbe6vWdGa/pub?gid=306647251&single=true&output=csv')
+
+        file1 = listateacher[["name"]]
+
+        f = open("lista_teachers.txt","w", encoding="utf-8")
+        archivoJson = file1.to_json(orient="split")
+        parsed = json.loads(archivoJson)
+        f.write("Docentes de Academia de las Américas)
+
+        with open('lista_teachers.json','w', encoding="utf-8") as f:
+            json.dump(parsed,f, indent=4)
+
+        with open ('lista_teachers.json','r', encoding="utf-8") as f:
+            recaudo_json =json.load(f)
+
+#        registro=open("recaudo.txt","r", encoding="utf-8")
+#        f = open("recaudoText.txt","w", encoding="utf-8")
+#        for x in registro:
+#            xf=x.replace("]","")
+#            f.write(xf)
+#        f.close()
+
+        f = open("lista_teachers.txt","r", encoding="utf-8") 
+        return f.read()
+
+### FIN LISTA DOCENTES ###
+
 #Default 
     aleatorio = ""#choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴",""])
     
