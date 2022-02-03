@@ -334,7 +334,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
             with open ('lista_teachers.txt','a', encoding="utf-8") as f:
                 f.write(str(lista_json["data"][i])+'\n')
-	f.close()
+        f.close()
 #        registro=open("recaudo.txt","r", encoding="utf-8")
 #        f = open("recaudoText.txt","w", encoding="utf-8")
 #        for x in registro:
