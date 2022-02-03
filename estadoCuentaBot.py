@@ -53,6 +53,7 @@ def start_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.
     *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*:
     El orden, la belleza y el bienestar en nuestros corazones y alrededor nuestro.""", parse_mode="markdown")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
 
 # Comando para consultar el ID del estudiante
 def consulta_id_chat_command(update: Update, _: CallbackContext):
@@ -230,7 +231,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 ############# ESCUELA DE PADRES #################
 # Escuela de padres
 def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}"+"""\n
+    update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}:"+"""\n
     🤝Bienvenidos a nuestra escuela de padres.\n
     *Metodología*
     1. Leer cada capítulo de libro
