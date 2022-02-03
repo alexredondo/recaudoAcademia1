@@ -107,7 +107,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
     intent_certificado = ("certificado","necesito un certificado", "necesito unos certificados", "necesito el observador")
     for x in intent_certificado:
         if re.search(x, user_message) is not None:
-            return  "📝 EL certificado se le enviara en formato PDF por este medio.\n 📝 Si lo necesita impreso debe solicitarlo.\n 📝 Pronto se lo enviaremos, si el certificado está pago. /n Ingrese a este link para mayor información: \n\n   /certificados \n\n"
+            return  " 📝 EL certificado se le enviara en formato PDF por este medio.\n 📝 Si lo necesita impreso debe solicitarlo.\n 📝 Pronto se lo enviaremos, si el certificado está pago.\n  Ingrese a este link para mayor información:\n\n   /certificados \n\n"
 
 ###### GENERA LISTADOS ######
 # Función que genera listados
