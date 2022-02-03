@@ -118,7 +118,7 @@ def handle_message(update, context):
 
 #Estado de cuenta
 def estadocuenta_command(update: Update, _: CallbackContext):
-    update.message.reply_text("🤝Cordial saludo ! \n A continuación los pagos actualizados hasta ayer.\n")
+    update.message.reply_text("Cordial saludo ! \n A continuación los pagos actualizados hasta ayer.\n")
     id_chat_guion = str(update.effective_chat.id)
     id_chat_string = id_chat_guion.replace("-", "")
     recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=1830933640&single=true&output=csv')
@@ -230,7 +230,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 ############# ESCUELA DE PADRES #################
 # Escuela de padres
 def escuelapadres_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""Cordial saludo familia !\n
+    update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}"+"""\n
     🤝Bienvenidos a nuestra escuela de padres.\n
     *Metodología*
     1. Leer cada capítulo de libro
