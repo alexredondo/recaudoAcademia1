@@ -316,12 +316,12 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
     if user_message in ["teacher_list"]:
         lista_teachers = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vToYFmQPyJzsYhfu7pCrXWrjmGE346tA-i9XNOQbr8anQ5ItWUk0C8UcLj26gQZujc9paPhbe6vWdGa/pub?gid=306647251&single=true&output=csv')
 
-        file1 = lista_teachers[["nombre"]]
+        file1 = lista_teachers[["nombre","grupo"]]
 
         f = open("lista_teachers.txt","w", encoding="utf-8")
         archivoJson = file1.to_json(orient="split")
         parsed = json.loads(archivoJson)
-        f.write("Docentes de Academia de las Américas\n")
+        f.write("Docentes de Academia de las Américas\n\n")
 
         with open('lista_teachers.json','w', encoding="utf-8") as f:
             json.dump(parsed,f, indent=4)
@@ -341,6 +341,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         for x in registro:
             xf=x.replace("]","")
             f.write(xf)
+            xf=x.replace("[","")
+            f.write(xf)		
         f.close()
 
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
