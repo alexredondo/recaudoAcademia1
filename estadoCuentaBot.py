@@ -53,7 +53,7 @@ def start_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.
     *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*:
     El orden, la belleza y el bienestar en nuestros corazones y alrededor nuestro.""", parse_mode="markdown")
-    update.bot.send_message(chat_id=update.effective_chat.id, text="I'm a bot, please talk to me!")
+    update.message.reply_photo("https://docs.pyrogram.org/index.html")
 
 # Comando para consultar el ID del estudiante
 def consulta_id_chat_command(update: Update, _: CallbackContext):
