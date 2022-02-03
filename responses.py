@@ -321,7 +321,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f = open("lista_teachers.txt","w", encoding="utf-8")
         archivoJson = file1.to_json(orient="split")
         parsed = json.loads(archivoJson)
-        f.write("Docentes de Academia de las Américas")
+        f.write("Docentes de Academia de las Américas\n")
 
         with open('lista_teachers.json','w', encoding="utf-8") as f:
             json.dump(parsed,f, indent=4)
@@ -335,14 +335,15 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
             with open ('lista_teachers.txt','a', encoding="utf-8") as f:
                 f.write(str(lista_json["data"][i])+'\n')
         f.close()
-#        registro=open("recaudo.txt","r", encoding="utf-8")
-#        f = open("recaudoText.txt","w", encoding="utf-8")
-#        for x in registro:
-#            xf=x.replace("]","")
-#            f.write(xf)
-#        f.close()
+	
+        registro=open("lista_teachers.txt","r", encoding="utf-8")
+        f = open("lista_teachers_1.txt","w", encoding="utf-8")
+        for x in registro:
+            xf=x.replace("]","")
+            f.write(xf)
+        f.close()
 
-        f = open("lista_teachers.txt","r", encoding="utf-8") 
+        f = open("lista_teachers_1.txt","r", encoding="utf-8") 
         return f.read()
 
 ### FIN LISTA DOCENTES ###
