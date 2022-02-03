@@ -339,8 +339,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         registro=open("lista_teachers.txt","r", encoding="utf-8")
         f = open("lista_teachers_1.txt","w", encoding="utf-8")
         for x in registro:
-            yield x.replace("]","")
-            next(f.write(x))
+            xf = x.replace("]","")
+            f.write(xf)
         f.close()
 
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
