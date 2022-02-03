@@ -79,7 +79,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 #Evidencia pago    
     if user_message in ("👍*","👍**"):
-        mensaje_pago_recibido=("*Muchas gracias!*\n\n📬 Al *_correo_* se le envía el recibo de caja ")
+        mensaje_pago_recibido=("Muchas gracias!\n\n📬 Al correo se le envía el recibo de caja ")
         
         return  mensaje_pago_recibido
 
