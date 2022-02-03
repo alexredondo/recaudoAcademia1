@@ -336,11 +336,13 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
                 f.write(str(lista_json["data"][i])+'\n')
         f.close()
 	
-        registro=open("lista_teachers.txt","r", encoding="utf-8")
+        registro = open("lista_teachers.txt","r", encoding="utf-8")
         f = open("lista_teachers_1.txt","w", encoding="utf-8")
         for x in registro:
+            registro = open("lista_teachers.txt","r", encoding="utf-8")
             xf = x.replace("]","")
             f.write(xf)
+            registro.close()
         f.close()
 
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
