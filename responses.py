@@ -170,24 +170,6 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f = open("list_student_text_3.txt", "r", encoding="utf-8")
         return "*LISTA DE ESTUDIANTES*\n"+"Cantidad: "+"*"+str(len(list_student.index))+"*"+"\n"+f.read() # imprime
 
-# Lista de estudiantes que se le entrega el kit
-    if user_message in ("kitsi","kit si"):  # solicitud del usuario
-        list_student = pd.read_csv(
-            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=1350193451&single=true&output=csv')  # variable con tabla de datos se trae de googlesheet. Hoja compartida como archivo CSV.
-        genera_lista()
-        # apertura del archivo para impresión
-        f = open("list_student_text_3.txt", "r", encoding="utf-8")
-        return "Estudiantes que pagaron el kit.\n\n"+"*Grado | Estudiante | Entrega?*\n"+ f.read()  # imprime
-
-# Lista de estudiantes pendientes por pagar el kit
-    if user_message in ("kitno", "kit no"):  # solicitud del usuario
-        list_student = pd.read_csv(
-            'https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=925366367&single=true&output=csv')  # variable con tabla de datos se trae de googlesheet. Hoja compartida como archivo CSV.
-        genera_lista()
-        # apertura del archivo para impresión
-        f = open("list_student_text_3.txt", "r", encoding="utf-8")
-        return "Formulario para registrar:  \n"+"[link](https://docs.google.com/spreadsheets/d/11P7-Eq_MGWGSjqirMawN3pS0t6Jsc5W4fb6UfGUeqQI/edit#gid=1350193451)\n"+"Estudiantes que pagaron el kit.\n\n" + "Grado | Estudiante\n"+ f.read()  # imprime
-
 # generar beneficios de Academia
     if user_message in ("beneficios academia","valor agregado"):  # solicitud del usuario
         return """💫 Beneficios que tendrá su hijo(a) y su familia en Academia de las Américas.\n
