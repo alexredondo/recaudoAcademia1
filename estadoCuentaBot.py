@@ -268,8 +268,8 @@ def capitulo1_command(update: Update, _: CallbackContext):
     ▶️ /escuela""", parse_mode="markdown")
 
 ############# LISTADOS KIT #################
-def kit_command(update: Update, _: CallbackContext):
-    update.message.reply_text(f"*Hola* {update.effective_user.first_name}:"+"""\n
+def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
+    update.message.reply_text("""
     🤝Elige el grupo respectivo.\n
     
     ▶️ [Párvulo]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
