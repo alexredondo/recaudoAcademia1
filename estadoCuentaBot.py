@@ -300,6 +300,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
+    dispatcher.add_handler(CommandHandler("kit1492", kit_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("cap1", capitulo1_command))
