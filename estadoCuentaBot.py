@@ -267,6 +267,23 @@ def capitulo1_command(update: Update, _: CallbackContext):
     ▶️ /tablacontenido
     ▶️ /escuela""", parse_mode="markdown")
 
+############# LISTADOS KIT #################
+def kit_command(update: Update, _: CallbackContext):
+    update.message.reply_text(f"*Hola* {update.effective_user.first_name}:"+"""\n
+    🤝Elige el grupo respectivo.\n
+    
+    ▶️ [Párvulo]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Prejardín]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Jardín]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Transición]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Primero]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Segundo]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Tercero]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Cuarto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=514475435&single=true&output=csv")
+    ▶️ [Quinto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Sexto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    """, parse_mode="markdown")
+    
 # código de sistema
 def main() -> None:
     # Create the Updater and pass it your bot's token.
