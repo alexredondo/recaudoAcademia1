@@ -273,7 +273,7 @@ def kit_command(update: Update, _: CallbackContext):
     🤝Elige el grupo respectivo.\n
     
     ▶️ [Párvulo]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
-    ▶️ [Prejardín]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Prejardín]("https://www.youtube.com/watch?v=JQCiqKQT1t8")
     ▶️ [Jardín]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
     ▶️ [Transición]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
     ▶️ [Primero]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
