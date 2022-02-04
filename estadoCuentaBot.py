@@ -272,16 +272,16 @@ def kit_command(update: Update, _: CallbackContext):
     update.message.reply_text(f"*Hola* {update.effective_user.first_name}:"+"""\n
     🤝Elige el grupo respectivo.\n
     
-    ▶️ [Párvulo]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=383016375single=true&output=csv")
-    ▶️ [Prejardín]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Jardín]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Transición]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Primero]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Segundo]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Tercero]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Cuarto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=514475435&single=true&output=csv")
-    ▶️ [Quinto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
-    ▶️ [Sexto]("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ64ugIzeR8oxIQyVUPBTJbatH5FoJNfcxcLMrvhxeCqZ2jZQHzb01gQR6Bk0V3diT1WMbMGgCRODFN/pub?gid=1468752234&single=true&output=csv")
+    ▶️ [Párvulo]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Prejardín]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Jardín]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Transición]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Primero]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Segundo]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=1468752234")
+    ▶️ [Tercero]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Cuarto]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=514475435")
+    ▶️ [Quinto]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
+    ▶️ [Sexto]("https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375")
     """, parse_mode="markdown")
     
 # código de sistema
