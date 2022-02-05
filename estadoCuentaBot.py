@@ -7,6 +7,7 @@ import pandas as pd
 import json
 import re
 import csv
+import os
 from fpdf import FPDF
 
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, Update
@@ -292,7 +293,7 @@ def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.e
 # código de sistema
 def main() -> None:
     # Create the Updater and pass it your bot's token.
-    updater = Updater(TOKEN)
+    updater = Updater(token=TOKEN)
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
@@ -322,4 +323,5 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    token = os.environ['TOKEN']
     main()
