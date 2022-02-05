@@ -324,4 +324,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     token = os.environ['TOKEN']
-    #main()
+    main()
