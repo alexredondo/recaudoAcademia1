@@ -287,7 +287,7 @@ def imprimirpdf():
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
     imprimirpdf()
     update.message.reply_text("después del imprimir")
-    update.message.reply_document("/recaudoText7.txt")
+    update.message.reply_document("recaudoText7.txt")
 
 # código de sistema
 def main() -> None:
