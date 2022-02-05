@@ -7,6 +7,7 @@ import pandas as pd
 import json
 import re
 import csv
+from fpdf import FPDF
 
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, Update
 from telegram.ext import (
@@ -275,7 +276,16 @@ def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective
     ▶️ [Lista pagos y entrega de kit](https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375)
 
     """, parse_mode="markdown")
-    
+
+############# IMPRIMIR PDF #################
+def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 16)
+    pdf.cell(40, 10, 'ESTADO CUENTA')
+    pdf.output('estado_cuenta_academia.pdf', 'F')
+    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/estado_cuenta_academia.pdf")
+
 # código de sistema
 def main() -> None:
     # Create the Updater and pass it your bot's token.
@@ -293,6 +303,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
     dispatcher.add_handler(CommandHandler("kitsi", kit_command))
+    dispatcher.add_handler(CommandHandler("pdf", imprimirpdf_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("cap1", capitulo1_command))
