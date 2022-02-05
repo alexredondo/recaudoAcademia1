@@ -54,7 +54,7 @@ def start_command(update: Update, _: CallbackContext):
     *Dios* es el principio. Estamos completos por Él. Esto es la *PAZ*:
     El orden, la belleza y el bienestar en nuestros corazones y alrededor nuestro.""", parse_mode="markdown")
     update.message.reply_photo("https://docs.pyrogram.org/index.html")
-    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/blob/master/certificado.pdf")
+    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/certificado.pdf")
 
 # Comando para consultar el ID del estudiante
 def consulta_id_chat_command(update: Update, _: CallbackContext):
