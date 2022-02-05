@@ -278,7 +278,7 @@ def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective
     """, parse_mode="markdown")
 
 ############# IMPRIMIR PDF #################
-def imprimirpdf ()
+def imprimirpdf ():
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
@@ -286,8 +286,8 @@ def imprimirpdf ()
     pdf.output('estado_cuenta_academia.pdf', 'F')
 
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
-
-    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/estado_cuenta_academia.pdf")
+    imprimirpdf ()
+    update.message.reply_document("estado_cuenta_academia.pdf")
 
 # código de sistema
 def main() -> None:
