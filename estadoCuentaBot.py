@@ -287,7 +287,7 @@ def imprimirpdf():
     # Unicode is not yet supported in the py3k version; use windows-1252 standard font
     pdf.set_font('Arial', '', 14)  
     pdf.ln(10)
-    pdf.write(5, 'hello world %s áéíóúüñ' % sys.version)
+    pdf.write(5, 'hello world %s áéíóúüñ')
     pdf.output('estado_cuenta_academia.pdf', 'F')
 
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
