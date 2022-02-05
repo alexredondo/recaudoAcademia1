@@ -285,7 +285,6 @@ def imprimirpdf():
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, 'ESTADO CUENTA1')
     pdf.output('estado_cuenta_academia.pdf', 'F')
-    update.message.reply_text("antes del imprimir")
 
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
     imprimirpdf()
