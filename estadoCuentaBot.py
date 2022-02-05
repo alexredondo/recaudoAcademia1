@@ -284,7 +284,7 @@ def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.e
     pdf.set_font('Arial', 'B', 16)
     pdf.cell(40, 10, 'ESTADO CUENTA')
     pdf.output('estado_cuenta_academia.pdf', 'F')
-    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/estado_cuenta_academia.pdf")
+    #update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/estado_cuenta_academia.pdf")
 
 # código de sistema
 def main() -> None:
