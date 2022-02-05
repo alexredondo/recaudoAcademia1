@@ -287,7 +287,7 @@ def imprimirpdf ():
 
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
     imprimirpdf ()
-    update.message.reply_document("estado_cuenta_academia.pdf")
+    update.message.reply_document("/estado_cuenta_academia.pdf")
 
 # código de sistema
 def main() -> None:
