@@ -294,7 +294,7 @@ def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.e
 def main() -> None:
     token = os.environ['TOKEN']
     # Create the Updater and pass it your bot's token.
-    updater = Updater(token=TOKEN)
+    updater = Updater(token)
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
