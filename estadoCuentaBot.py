@@ -8,7 +8,7 @@ import json
 import re
 import csv
 import os
-from fpdf import FPDF
+from reportlab.pdfgen import canvas
 
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, Update
 from telegram.ext import (
@@ -280,15 +280,9 @@ def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective
 
 ############# IMPRIMIR PDF #################
 def imprimirpdf():
-    pdf = FPDF()
-    # compression is not yet supported in py3k version
-    pdf.compress = False
-    pdf.add_page()
-    # Unicode is not yet supported in the py3k version; use windows-1252 standard font
-    pdf.set_font('Arial', '', 14)  
-    pdf.ln(10)
-    pdf.write(5, 'hello world %s áéíóúüñ')
-    pdf.output('estado_cuenta_academia.pdf', 'F')
+    doc = canvas.Canvas("estado_cuenta_academia.pdf")
+    doc.drawString(100, 750, "Hola Mundo!!!")
+    doc.save()
 
 def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
     imprimirpdf()
