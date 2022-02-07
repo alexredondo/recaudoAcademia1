@@ -37,7 +37,7 @@ def sample_responses(input_text):
 #        if re.search(saludo, user_message) is not None:
 #            return aleatorio_hello_informal
 
-#Saludo formal
+#Saludo formal qw
 #    intent_saludo_formal_usuario = ("buenos dias", "buenas noches","buenas tardes","good morning","good morning academia","buen dia","buenos días")
 #    for saludo in intent_saludo_formal_usuario:
 #        aleatorio_saludo_formal = choice(["","👋Te saluda @lajirafabot","👋 Hola, cordial saludo @lajirafabot","Dios le bendiga 👍","","","","","","","","","Bendiciones 🙏"])
