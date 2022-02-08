@@ -192,7 +192,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         filtro = recaudoPD["ID"] == id_est
         my_filtro = recaudoPD[filtro]
         my_filtro = float(my_filtro[["Pago","Valor","Fecha"]])
-	myFiltroSort = my_filtro.sort_values("Fecha")
+        myFiltroSort = my_filtro.sort_values("Fecha")
         myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
 
         file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
