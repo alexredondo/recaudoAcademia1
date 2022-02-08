@@ -125,7 +125,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     update.message.reply_text("Cordial saludo ! \n A continuación los pagos actualizados hasta ayer.\n")
     id_chat_guion = str(update.effective_chat.id)
     id_chat_string = id_chat_guion.replace("-", "")
-    recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=1830933640&single=true&output=csv')
+    recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=330651820&single=true&output=csv')
     id_est=int(id_chat_string)
     filtro = recaudoPD["ID"] == id_est
     my_filtro = recaudoPD[filtro]
