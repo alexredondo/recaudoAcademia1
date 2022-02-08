@@ -190,7 +190,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=330651820&single=true&output=csv')
         id_est=int(user_message)
         filtro = recaudoPD["ID"] == id_est
-        my_filtro = recaudoPD[filtro]        
+        my_filtro = recaudoPD[filtro]
+        my_filtro = my_filtro[["Pago","Valor"]].to_numeric(s)
         myFiltroSort = my_filtro.sort_values("Fecha")
         myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
 
