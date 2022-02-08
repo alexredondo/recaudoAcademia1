@@ -201,7 +201,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
 
         f = open("recaudo.txt","w", encoding="utf-8")
-        f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[1,1])+ '\n\n')
+        f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,0])+ '\n\n')
         f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[1,6]) + '\n\n')
         archivoJson = file1.to_json(orient="split")
         parsed = json.loads(archivoJson)
