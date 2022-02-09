@@ -126,7 +126,11 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     id_chat_guion = str(update.effective_chat.id)
     id_chat_string = id_chat_guion.replace("-", "")
     recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=330651820&single=true&output=csv')
-    id_est=int(id_chat_string)
+    id_est=int(user_message)
+    recaudoPD["Pago"] = pd.Series(recaudoPD["Pago"])
+    recaudoPD["Pago"] = pd.to_numeric(recaudoPD["Pago"], downcast='integer')
+    recaudoPD["Valor"] = pd.Series(recaudoPD["Valor"])
+    recaudoPD["Valor"] = pd.to_numeric(recaudoPD["Valor"], downcast='integer')
     filtro = recaudoPD["ID"] == id_est
     my_filtro = recaudoPD[filtro]
     myFiltroSort = my_filtro.sort_values("Fecha")
@@ -135,8 +139,8 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
 
     f = open("recaudo.txt","w", encoding="utf-8")
-    f.write("ESTADO DE CUENTA"+"\n\n"+str("Estudiante:\n"+my_filtro.iloc[1,1])+'\n\n')
-    f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[1,6]) + '\n\n')
+    f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
+    f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
     archivoJson = file1.to_json(orient="split")
     parsed = json.loads(archivoJson)
     f.write("Los costos educativos están en rojo 🔴 y los pagos realizados en verde 🟢:\n")
