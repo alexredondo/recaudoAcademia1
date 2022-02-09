@@ -143,7 +143,7 @@ def estadocuenta_command(update: Update, _: CallbackContext):
     f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
     archivoJson = file1.to_json(orient="split")
     parsed = json.loads(archivoJson)
-    f.write("Los costos educativos están en rojo 🔴 y los pagos realizados en verde 🟢:\n")
+    f.write("Los costos educativos están en rojo 🔴 \n y los pagos realizados en verde 🟢:\n")
 
     with open('recaudo.json','w', encoding="utf-8") as f:
         json.dump(parsed,f, indent=4)
