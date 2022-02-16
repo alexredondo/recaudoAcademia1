@@ -205,7 +205,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
         archivoJson = file1.to_json(orient="split")
         print (archivoJson)
-	parsed = json.loads(archivoJson)
+        parsed = json.loads(archivoJson)
         f.write("Los costos educativos están en rojo 🔴 y los pagos realizados en verde 🟢:\n")
 
         with open('recaudo.json','w', encoding="utf-8") as f:
