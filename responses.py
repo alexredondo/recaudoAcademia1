@@ -204,7 +204,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
         f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
         archivoJson = file1.to_json(orient="split")
-        parsed = json.loads(archivoJson)
+        print (archivoJson)
+	parsed = json.loads(archivoJson)
         f.write("Los costos educativos están en rojo 🔴 y los pagos realizados en verde 🟢:\n")
 
         with open('recaudo.json','w', encoding="utf-8") as f:
@@ -332,9 +333,6 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
         return f.read()
-        f = open("lista_teachers_1.txt","r", encoding="utf-8") 
-        print("result:", f)
-        f.close()
 
 ### FIN LISTA DOCENTES ###
 
