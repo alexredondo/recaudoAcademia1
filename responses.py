@@ -333,8 +333,8 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
         return f.read()
         f = open("lista_teachers_1.txt","r", encoding="utf-8") 
-	print("result:", f)
-	f.close()
+        print("result:", f)
+        f.close()
 
 ### FIN LISTA DOCENTES ###
 
