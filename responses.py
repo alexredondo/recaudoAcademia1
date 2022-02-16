@@ -296,7 +296,6 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         f.close()
 
         f = open("recaudoText7.txt","r", encoding="utf-8")
-        print (f.read())
         return f.read()
 
 ### LISTA DOCENTES ###
