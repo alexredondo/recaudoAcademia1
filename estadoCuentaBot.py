@@ -30,26 +30,26 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-# Probando botón
-def boton_command(update: Update, _: CallbackContext):
+# Clases de primero
+def clases_primero(update: Update, _: CallbackContext):
     # Configuración de los botones
-    button1 = InlineKeyboardButton(
-        text ="información",
+    button_math = InlineKeyboardButton(
+        text ="🧪 Matemáticas",
         url="www.academia.net.co"
     )
 
-    button2 = InlineKeyboardButton(
-        text ="Medios de Pago",
+    button_naturales = InlineKeyboardButton(
+        text ="🧪 C. Naturales",
         url="https://telegra.ph/Titulo-de-ejemplo-01-23"
     )
     # Impresión de los botones
     update.message.reply_text(
-        text="Hola mundo",
+        text="Asignaturas",
         reply_markup=InlineKeyboardMarkup([
-         [button1, button2]
+         [button_math, button_naturales]
         ])
     )
-
+   
 # comando de inicio
 def start_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.
@@ -301,7 +301,7 @@ def main() -> None:
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("boton", boton_command)) #probando botón
+    dispatcher.add_handler(CommandHandler("clases", clases_primero)) #probando botón
     dispatcher.add_handler(CommandHandler("id", consulta_id_chat_command))
     dispatcher.add_handler(CommandHandler("start", start_command))
     dispatcher.add_handler(CommandHandler("ayuda", help_command))
