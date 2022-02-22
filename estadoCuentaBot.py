@@ -48,12 +48,12 @@ def clases_primero(update: Update, _: CallbackContext):
     # parse x:
     link_clase_loads = json.loads(link_clase)
 
-    button_mat = InlineKeyboardButton(
+    button_sem5 = InlineKeyboardButton(
         text ="Semana 5",
         url=link_clase_loads["sem5"]
     )
 
-    button_nat = InlineKeyboardButton(
+    button_sem6 = InlineKeyboardButton(
         text ="Semana 6",
         url=link_clase_loads["sem5"]
     )
@@ -61,7 +61,7 @@ def clases_primero(update: Update, _: CallbackContext):
     update.message.reply_text(
         text="\n Por favor elige la asignatura: ",
         reply_markup=InlineKeyboardMarkup([
-         [button_math, button_naturales]
+         [button_sem5, button_sem6]
         ])
     )
 
