@@ -55,7 +55,7 @@ def clases_primero(update: Update, _: CallbackContext):
 
     button_nat = InlineKeyboardButton(
         text ="Semana 6",
-        url=link_clase:loads["sem5"]
+        url=link_clase_loads["sem5"]
     )
     # Impresión de los botones
     update.message.reply_text(
