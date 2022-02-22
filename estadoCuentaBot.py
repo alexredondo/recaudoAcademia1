@@ -32,15 +32,30 @@ logger = logging.getLogger(__name__)
 
 # Clases de primero
 def clases_primero(update: Update, _: CallbackContext):
-    # Configuración de los botones
+    link_clase = """
+  {
+    "sem1": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem2": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem3": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem4": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem5": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem6": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem7": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem8": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem9": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
+    "sem10": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true"
+  } """
+    # parse x:
+    y = json.loads(link_clase)
+
     button_mat = InlineKeyboardButton(
-        text ="🔢Mat",
-        url="www.academia.net.co"
+        text ="Semana 5",
+        url=link_clase["sem5"]
     )
 
     button_nat = InlineKeyboardButton(
-        text ="🧪Nat",
-        url="https://telegra.ph/Titulo-de-ejemplo-01-23"
+        text ="Semana 6",
+        url=link_clase["sem5"]
     )
     # Impresión de los botones
     update.message.reply_text(
