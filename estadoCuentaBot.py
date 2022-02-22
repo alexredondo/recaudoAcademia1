@@ -52,30 +52,11 @@ def clases_primero(update: Update, _: CallbackContext):
 
 # clases de primero 2
 def clases_de_naturales(update: Update, _: CallbackContext):
-    update.message.reply_text("""
+    x = """
     *IDEA FUNDACIONAL*.
     los seres vivos hemos sido creados para evolucionar, es decir, para seguir creciendo.
-    """, parse_mode="markdown")
-    update.message.reply_text("""
-    *ESTÁNDAR*.
-    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
-    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
-    """, parse_mode="markdown")
-    update.message.reply_text("""
-    *ESTÁNDAR*.
-    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
-    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
-    """, parse_mode="markdown")
-    update.message.reply_text("""
-    *ESTÁNDAR*.
-    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
-    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
-    """, parse_mode="markdown")
-    update.message.reply_text("""
-    *ESTÁNDAR*.
-    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
-    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
-    """, parse_mode="markdown")
+    """
+    update.message.reply_text(x, parse_mode="markdown")
     update.message.reply_photo("https://docs.pyrogram.org/index.html")
     update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/certificado.pdf")
     
