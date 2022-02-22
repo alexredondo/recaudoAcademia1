@@ -66,7 +66,7 @@ def clases_de_naturales(update: Update, _: CallbackContext):
     💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
     💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
     """, parse_mode="markdown")
-        update.message.reply_text("""
+    update.message.reply_text("""
     *ESTÁNDAR*.
     💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
     💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
