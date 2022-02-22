@@ -46,11 +46,11 @@ def clases_primero(update: Update, _: CallbackContext):
     "sem10": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true"
   } """
     # parse x:
-    y = json.loads(link_clase)
+    link_clase_loads = json.loads(link_clase)
 
     button_mat = InlineKeyboardButton(
         text ="Semana 5",
-        url=link_clase["sem5"]
+        url=link_clase_loads["sem5"]
     )
 
     button_nat = InlineKeyboardButton(
