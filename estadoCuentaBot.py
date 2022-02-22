@@ -326,7 +326,7 @@ def main() -> None:
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("clases", clases_de_naturales)) #probando botón
+    dispatcher.add_handler(CommandHandler("clases", clases_primero)) #probando botón
     dispatcher.add_handler(CommandHandler("id", consulta_id_chat_command))
     dispatcher.add_handler(CommandHandler("start", start_command))
     dispatcher.add_handler(CommandHandler("ayuda", help_command))
