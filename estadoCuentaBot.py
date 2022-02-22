@@ -33,23 +33,51 @@ logger = logging.getLogger(__name__)
 # Clases de primero
 def clases_primero(update: Update, _: CallbackContext):
     # Configuración de los botones
-    button_math = InlineKeyboardButton(
-        text ="🧪 Matemáticas",
+    button_mat = InlineKeyboardButton(
+        text ="🔢Mat",
         url="www.academia.net.co"
     )
 
-    button_naturales = InlineKeyboardButton(
-        text ="🧪 C. Naturales",
+    button_nat = InlineKeyboardButton(
+        text ="🧪Nat",
         url="https://telegra.ph/Titulo-de-ejemplo-01-23"
     )
     # Impresión de los botones
     update.message.reply_text(
-        text="Asignaturas",
+        text="\n Por favor elige la asignatura: ",
         reply_markup=InlineKeyboardMarkup([
          [button_math, button_naturales]
         ])
     )
-   
+
+# clases de primero 2
+def clases_de_naturales(update: Update, _: CallbackContext):
+    update.message.reply_text("""
+    *IDEA FUNDACIONAL*.
+    los seres vivos hemos sido creados para evolucionar, es decir, para seguir creciendo.
+    """, parse_mode="markdown")
+    update.message.reply_text("""
+    *ESTÁNDAR*.
+    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
+    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
+    """, parse_mode="markdown")
+    update.message.reply_text("""
+    *ESTÁNDAR*.
+    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
+    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
+    """, parse_mode="markdown")
+        update.message.reply_text("""
+    *ESTÁNDAR*.
+    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
+    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
+    """, parse_mode="markdown")update.message.reply_text("""
+    *ESTÁNDAR*.
+    💠 Se identifica como un ser vivo que comparte algunas características con otros seres vivos y que se relaciona con ellos en un entorno en el que todos se desarrollan.
+    💠 Valora la utilidad de algunos objetos y técnicas desarrollados por el ser humano y reconoce que son agentes de cambio en el entorno y en la sociedad.
+    """, parse_mode="markdown")
+    update.message.reply_photo("https://docs.pyrogram.org/index.html")
+    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/certificado.pdf")
+    
 # comando de inicio
 def start_command(update: Update, _: CallbackContext):
     update.message.reply_text("""Un saludo de paz de parte de *Academia de las Américas*.
@@ -301,7 +329,7 @@ def main() -> None:
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("clases", clases_primero)) #probando botón
+    dispatcher.add_handler(CommandHandler("clases", clases_de_naturales)) #probando botón
     dispatcher.add_handler(CommandHandler("id", consulta_id_chat_command))
     dispatcher.add_handler(CommandHandler("start", start_command))
     dispatcher.add_handler(CommandHandler("ayuda", help_command))
