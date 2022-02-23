@@ -9,6 +9,7 @@ import re
 import csv
 import os
 from reportlab.pdfgen import canvas
+from random import choice
 
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove, Update
 from telegram.ext import (
@@ -276,7 +277,8 @@ def escuelapadres_command(update: Update, _: CallbackContext):
 
 # Tabla de contenido
 def tablacontenido_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""*TABLA DE CONTENIDO*:
+    update.message.reply_text("""
+    *TABLA DE CONTENIDO*:\n
     /cap1 Dios piensa en individuos, naciones y generaciones
     /cap2 Dios instruye la familia y Sus leyes para ella
     /cap3 ¿Cuál es la base de la familia y su acción?
@@ -287,17 +289,33 @@ def tablacontenido_command(update: Update, _: CallbackContext):
     /cap8 Educando en comodato
     /cap9 Familias cristianas, naciones y generaciones en libertad
     /cap10 Eligiendo una nueva familia
-    Ir a /escuela""", parse_mode="markdown")
+    Ir a /escuela
+    """, parse_mode="markdown")
 
 #Capitulo 1
 def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""*1️⃣ Dios piensa en individuos, naciones y generaciones*\n
-    📺 [Vídeo](https://www.youtube.com/watch?v=JQCiqKQT1t8)
+    update.message.reply_text("""═══════════════════════════\n
+    *1️⃣ Dios piensa en individuos, naciones y generaciones*\n
+    📺 [Vídeo](https://youtu.be/VIS5FIt1wa0)
     📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-    ▶️ [Encuentro](https://www.youtube.com/watch?v=JQCiqKQT1t8)
+    ═══════════════════════════\n
     ▶️ /tablacontenido
-    ▶️ /escuela""", parse_mode="markdown")
-
+    ▶️ /escuela
+    """, parse_mode="markdown")
+    idea= choice(["1. El ser humano fue creado a imagen y semejanza de Dios.", 
+"2. El ser humano fue creado con espíritu, alma y cuerpo.", 
+"3. Al ser creados a imagen de Dios, podemos razonar cómo Dios razona.", 
+"4. En la familia el individuo práctica por primera vez la verdad aprendida.",
+"5. Dios piensa en naciones, por eso mandó a llenar la tierra.", 
+"6. Dios trabaja con Israel para enseñarnos que es una nación.",
+"7. Dios piensa en individuos, naciones y generaciones.",])
+    update.message.reply_text("""═══════════════════════════\n
+    *Ideas Fundacionales*"""+idea+"""
+    ═══════════════════════════\n
+    ▶️ /tablacontenido
+    ▶️ /escuela
+    """, parse_mode="markdown")
+############# FIN ESCUELA DE PADRES #################
 ############# LISTADOS KIT #################
 def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
     update.message.reply_text("""
