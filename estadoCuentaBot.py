@@ -267,7 +267,7 @@ def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}:"+"""\n
     🤝Bienvenidos a nuestra escuela de padres.\n
     *Metodología*
-    1. Leer cada capítulo de libro
+    1. Leer cada capítulo del libro
     2. Ver el vídeo
     3. Resolver el cuestionario
     4. Recordar las ideas fundacionales
@@ -297,8 +297,9 @@ def capitulo1_command(update: Update, _: CallbackContext):
     update.message.reply_text("""═════════════════════\n
     *1️⃣ Dios piensa en individuos, naciones y generaciones*\n
     📺 [Vídeo](https://youtu.be/VIS5FIt1wa0)
-    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform?usp=sf_link)\n"""
-    +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n"""+str(update.effective_chat.id)+"""\n+
+    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform?usp=sf_link)
+    \n\n"""
+    +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n\n"""+str(update.effective_chat.id)+"""\n
     ═════════════════════\n
     """, parse_mode="markdown")
     idea= choice(["💫 El ser humano fue creado a imagen y semejanza de Dios.", 
