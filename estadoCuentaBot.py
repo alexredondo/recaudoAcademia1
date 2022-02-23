@@ -263,9 +263,6 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 
 ############# ESCUELA DE PADRES #################
 # Escuela de padres
-from tkinter import N
-
-
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}:"+"""\n
     🤝Bienvenidos a nuestra escuela de padres.\n
