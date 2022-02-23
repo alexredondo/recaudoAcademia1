@@ -263,6 +263,9 @@ def estadocuenta_command(update: Update, _: CallbackContext):
 
 ############# ESCUELA DE PADRES #################
 # Escuela de padres
+from tkinter import N
+
+
 def escuelapadres_command(update: Update, _: CallbackContext):
     update.message.reply_text(f"*Cordial saludo* {update.effective_user.first_name}:"+"""\n
     🤝Bienvenidos a nuestra escuela de padres.\n
@@ -294,13 +297,11 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 
 #Capitulo 1
 def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""═══════════════════════\n
+    update.message.reply_text("""═════════════════════\n
     *1️⃣ Dios piensa en individuos, naciones y generaciones*\n
     📺 [Vídeo](https://youtu.be/VIS5FIt1wa0)
     📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)\n
-    ═══════════════════════\n
-    ▶️ /tablacontenido
-    ▶️ /escuela
+    ═════════════════════\n
     """, parse_mode="markdown")
     idea= choice(["💫 El ser humano fue creado a imagen y semejanza de Dios.", 
 "💫 El ser humano fue creado con espíritu, alma y cuerpo.", 
@@ -309,8 +310,11 @@ def capitulo1_command(update: Update, _: CallbackContext):
 "💫 Dios piensa en naciones, por eso mandó a llenar la tierra.", 
 "💫 Dios trabaja con Israel para enseñarnos que es una nación.",
 "💫 Dios piensa en individuos, naciones y generaciones.",])
-    update.message.reply_text("""═══════════════════════\n
-    *Ideas Fundacionales*\n"""+idea, parse_mode="markdown")
+    update.message.reply_text("""
+    *Ideas Fundacionales*\n"""+idea+"""\n
+    ▶️ /tablacontenido
+    ▶️ /escuela
+    """, parse_mode="markdown")
 ############# FIN ESCUELA DE PADRES #################
 ############# LISTADOS KIT #################
 def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
