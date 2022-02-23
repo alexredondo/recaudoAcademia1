@@ -294,27 +294,23 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 
 #Capitulo 1
 def capitulo1_command(update: Update, _: CallbackContext):
-    update.message.reply_text("""═══════════════════════════\n
+    update.message.reply_text("""═══════════════════════\n
     *1️⃣ Dios piensa en individuos, naciones y generaciones*\n
     📺 [Vídeo](https://youtu.be/VIS5FIt1wa0)
-    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)
-    ═══════════════════════════\n
+    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform)\n
+    ═══════════════════════\n
     ▶️ /tablacontenido
     ▶️ /escuela
     """, parse_mode="markdown")
-    idea= choice(["1. El ser humano fue creado a imagen y semejanza de Dios.", 
-"2. El ser humano fue creado con espíritu, alma y cuerpo.", 
-"3. Al ser creados a imagen de Dios, podemos razonar cómo Dios razona.", 
-"4. En la familia el individuo práctica por primera vez la verdad aprendida.",
-"5. Dios piensa en naciones, por eso mandó a llenar la tierra.", 
-"6. Dios trabaja con Israel para enseñarnos que es una nación.",
-"7. Dios piensa en individuos, naciones y generaciones.",])
-    update.message.reply_text("""═══════════════════════════\n
-    *Ideas Fundacionales*"""+idea+"""
-    ═══════════════════════════\n
-    ▶️ /tablacontenido
-    ▶️ /escuela
-    """, parse_mode="markdown")
+    idea= choice(["💫 El ser humano fue creado a imagen y semejanza de Dios.", 
+"💫 El ser humano fue creado con espíritu, alma y cuerpo.", 
+"💫 Al ser creados a imagen de Dios, podemos razonar cómo Dios razona.", 
+"💫 En la familia el individuo práctica por primera vez la verdad aprendida.",
+"💫 Dios piensa en naciones, por eso mandó a llenar la tierra.", 
+"💫 Dios trabaja con Israel para enseñarnos que es una nación.",
+"💫 Dios piensa en individuos, naciones y generaciones.",])
+    update.message.reply_text("""═══════════════════════\n
+    *Ideas Fundacionales*\n"""+idea, parse_mode="markdown")
 ############# FIN ESCUELA DE PADRES #################
 ############# LISTADOS KIT #################
 def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
