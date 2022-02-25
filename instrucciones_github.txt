@@ -7,3 +7,15 @@ git push -u origin master
 phrase: 12345
 
 Nota: con git push se actuliza el acceso.
+
+- Para listar los acceso remotos:
+git remote -v
+
+- Para iniciar una carpeta git
+git init
+
+- Para eliminar una carpeta git
+-git rm -rf .git
+
+- Para crear la carpeta git
+- got init
