@@ -190,147 +190,111 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
         recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=330651820&single=true&output=csv')
         id_est=int(user_message)
         recaudoPD["Pago"] = pd.Series(recaudoPD["Pago"])
-	    recaudoPD["Pago"] = pd.to_numeric(recaudoPD["Pago"], downcast='integer')
-	    recaudoPD["Valor"] = pd.Series(recaudoPD["Valor"])
-	    recaudoPD["Valor"] = pd.to_numeric(recaudoPD["Valor"], downcast='integer')
-	    filtro = recaudoPD["ID"] == id_est
-	    my_filtro = recaudoPD[filtro]
-	    myFiltroSort = my_filtro.sort_values("Fecha")
-	    myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
+        recaudoPD["Pago"] = pd.to_numeric(recaudoPD["Pago"], downcast='integer')
+        recaudoPD["Valor"] = pd.Series(recaudoPD["Valor"])
+        recaudoPD["Valor"] = pd.to_numeric(recaudoPD["Valor"], downcast='integer')
+        filtro = recaudoPD["ID"] == id_est
+        my_filtro = recaudoPD[filtro]
+        myFiltroSort = my_filtro.sort_values("Fecha")
+        myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
 
-	    file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
+        file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
 
-	    f = open("recaudo.txt","w", encoding="utf-8")
-	    f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
-	    f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
-	    archivoJson = file1.to_json(orient="split")
-	    parsed = json.loads(archivoJson)
-	    f.write("Los costos educativos están en rojo 🔴 \n y los pagos realizados en verde 🟢:\n")
+        f = open("recaudo.txt","w", encoding="utf-8")
+        f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
+        f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
+        archivoJson = file1.to_json(orient="split")
+        parsed = json.loads(archivoJson)
+        f.write("Los costos educativos están en rojo 🔴 \n y los pagos realizados en verde 🟢:\n")
 
-	    with open('recaudo.json','w', encoding="utf-8") as f:
+        with open('recaudo.json','w', encoding="utf-8") as f:
 		json.dump(parsed,f, indent=4)
 
 
-	    with open ('recaudo.json','r', encoding="utf-8") as f:
+        with open ('recaudo.json','r', encoding="utf-8") as f:
 		recaudo_json =json.load(f)
 
-	    for i in range(len(recaudo_json["data"])):
+        for i in range(len(recaudo_json["data"])):
 		print (recaudo_json["data"][i])
 
 		with open ('recaudo.txt','a', encoding="utf-8") as f:
-		    f.write("_______________________________"+'\n')
-		    f.write(str(recaudo_json["data"][i])+'\n')
+	        f.write("_______________________________"+'\n')
+	        f.write(str(recaudo_json["data"][i])+'\n')
 
-	    f=open("recaudo.txt","a", encoding="utf-8")
-	    totalCostos = my_filtro["Valor"].sum()
-	    totalPagos = my_filtro["Pago"].sum()
-	    pendiente = totalCostos-totalPagos
-	    a_favor="Pendientes"
-	    if pendiente<0:
+        f=open("recaudo.txt","a", encoding="utf-8")
+        totalCostos = my_filtro["Valor"].sum()
+        totalPagos = my_filtro["Pago"].sum()
+        pendiente = totalCostos-totalPagos
+        a_favor="Pendientes"
+        if pendiente<0:
 		a_favor=" A favor."
-	    f.write("\n")
-	    f.write("Total a la fecha : {:=17,} ".format(totalCostos))
-	    f.write("\n")
-	    f.write("🟢 Pagado       : {:=17,} ".format(totalPagos))
-	    f.write("\n")
-	    f.write("🔴 {}   : {:=14,} ".format(a_favor,pendiente))
-	    f.write("\n\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
-	    f.write("/mediodepago")
-	    f.close()
+        f.write("\n")
+        f.write("Total a la fecha : {:=17,} ".format(totalCostos))
+        f.write("\n")
+        f.write("🟢 Pagado       : {:=17,} ".format(totalPagos))
+        f.write("\n")
+        f.write("🔴 {}   : {:=14,} ".format(a_favor,pendiente))
+        f.write("\n\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
+        f.write("/mediodepago")
+        f.close()
 
-	    registro=open("recaudo.txt","r", encoding="utf-8")
-	    f = open("recaudoText.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudo.txt","r", encoding="utf-8")
+        f = open("recaudoText.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("]","")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText.txt","r", encoding="utf-8")
-	    f = open("recaudoText1.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText.txt","r", encoding="utf-8")
+        f = open("recaudoText1.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("[","")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText1.txt","r", encoding="utf-8")
-	    f = open("recaudoText2.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText1.txt","r", encoding="utf-8")
+        f = open("recaudoText2.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("🔴\', \'","🔴\nPlazo: ")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText2.txt","r", encoding="utf-8")
-	    f = open("recaudoText3.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText2.txt","r", encoding="utf-8")
+        f = open("recaudoText3.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("\', \'0\', \'","\nValor a pagar: $")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText3.txt","r", encoding="utf-8")
-	    f = open("recaudoText4.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText3.txt","r", encoding="utf-8")
+        f = open("recaudoText4.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("\'","")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText4.txt","r", encoding="utf-8")
-	    f = open("recaudoText5.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText4.txt","r", encoding="utf-8")
+        f = open("recaudoText5.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace("🟢, ","🟢\nFecha:")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText5.txt","r", encoding="utf-8")
-	    f = open("recaudoText6.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText5.txt","r", encoding="utf-8")
+        f = open("recaudoText6.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace(", 0","")
 		f.write(xf)
-	    f.close()
+        f.close()
 
-	    registro=open("recaudoText6.txt","r", encoding="utf-8")
-	    f = open("recaudoText7.txt","w", encoding="utf-8")
-	    for x in registro:
+        registro=open("recaudoText6.txt","r", encoding="utf-8")
+        f = open("recaudoText7.txt","w", encoding="utf-8")
+        for x in registro:
 		xf=x.replace(", ","\nPagado: $")
 		f.write(xf)
-	    f.close()
-
-	    f = open("recaudoText7.txt","r", encoding="utf-8")
-	    return f.read()
-
-### LISTA DOCENTES ###
-
-    if user_message in ["teacher_list"]:
-        lista_teachers = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vToYFmQPyJzsYhfu7pCrXWrjmGE346tA-i9XNOQbr8anQ5ItWUk0C8UcLj26gQZujc9paPhbe6vWdGa/pub?gid=306647251&single=true&output=csv')
-
-        file1 = lista_teachers[["nombre","grupo"]]
-
-        f = open("lista_teachers.txt","w", encoding="utf-8")
-        archivoJson = file1.to_json(orient="split")
-        parsed = json.loads(archivoJson)
-        f.write("Docentes de Academia de las Américas\n"+"Cantidad: \n"+str(len(lista_teachers.index))+"\n\n")
-
-        with open('lista_teachers.json','w', encoding="utf-8") as f:
-            json.dump(parsed,f, indent=4)
-
-        with open ('lista_teachers.json','r', encoding="utf-8") as f:
-            lista_json =json.load(f)
-	
-        for i in range(len(lista_json["data"])):
-            print (lista_json["data"][i])
-
-            with open ('lista_teachers.txt','a', encoding="utf-8") as f:
-                f.write(str(lista_json["data"][i])+'\n')
-        f.close()
-	
-        registro = open("lista_teachers.txt","r", encoding="utf-8")
-        f = open("lista_teachers_1.txt","w", encoding="utf-8")
-        for x in registro:
-            transTable = x.maketrans(",", ">", "[]'")
-            xf = x.translate(transTable)
-            f.write(xf)		
         f.close()
 
-        f = open("lista_teachers_1.txt","r", encoding="utf-8")
+        f = open("recaudoText7.txt","r", encoding="utf-8")
         return f.read()
 
 ### FIN LISTA DOCENTES ###
