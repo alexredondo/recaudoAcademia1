@@ -336,16 +336,6 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 ### FIN LISTA DOCENTES ###
 
-### START MENSAJE DE COBRO ###
-    id_chat_guion = str(update.effective_chat.id)
-    id_chat_string = id_chat_guion.replace("-", "")
-    id_est=int(id_chat_string)
-    if id_est in [741245286]:
-        return """Hola familia ! \n
-        Se registra pago pendiente con Academia de las Américas,\n por favor revise su estado de cuenta\n
-        /cuenta"""
-### END MENSAJE DE COBRO ###
-
 #Default 
     aleatorio = ""#choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴",""])
     
