@@ -30,51 +30,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
-# Clases de primero
-def clases_primero(update: Update, _: CallbackContext):
-    link_clase = """
-  {
-    "sem1": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem2": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem3": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem4": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem5": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem6": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem7": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem8": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem9": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true",
-    "sem10": "https://clases.academia.edu.co/main/lp/lp_controller.php?cidReq=CIENCIANATURALES1&id_session=0&gidReq=0&gradebook=0&origin=&action=view&lp_id=772&isStudentView=true"
-  } """
-    # parse x:
-    link_clase_loads = json.loads(link_clase)
-
-    button_sem5 = InlineKeyboardButton(
-        text ="Semana 5",
-        url=link_clase_loads["sem5"]
-    )
-
-    button_sem6 = InlineKeyboardButton(
-        text ="Semana 6",
-        url=link_clase_loads["sem5"]
-    )
-    # Impresión de los botones
-    update.message.reply_text(
-        text="\n Por favor elige la asignatura: ",
-        reply_markup=InlineKeyboardMarkup([
-         [button_sem5, button_sem6]
-        ])
-    )
-
-# clases de primero 2
-def clases_de_naturales(update: Update, _: CallbackContext):
-    x = """
-    *IDEA FUNDACIONAL*.
-    los seres vivos hemos sido creados para evolucionar, es decir, para seguir creciendo.
-    """
-    update.message.reply_text(x, parse_mode="markdown")
-    update.message.reply_photo("https://docs.pyrogram.org/index.html")
-    update.message.reply_document("https://github.com/alexredondo/recaudoAcademia1/raw/master/certificado.pdf")
     
 # comando de inicio
 def start_command(update: Update, _: CallbackContext):
@@ -277,17 +232,18 @@ def escuelapadres_command(update: Update, _: CallbackContext):
 # Tabla de contenido
 def tablacontenido_command(update: Update, _: CallbackContext):
     update.message.reply_text("""
+    _Seleccione el capítulo en el link_\n
     *TABLA DE CONTENIDO*:\n
     /cap1 Dios piensa en individuos, naciones y generaciones
-    /cap2 Dios instruye la familia y Sus leyes para ella
-    /cap3 ¿Cuál es la base de la familia y su acción?
-    /cap4 Lo que deben hacer los padres
-    /cap5 Lo que no deben hacer los padres
-    /cap6 La edades que Dios nos dio en la vida
-    /cap7 Diseño diferente y complementario
-    /cap8 Educando en comodato
-    /cap9 Familias cristianas, naciones y generaciones en libertad
-    /cap10 Eligiendo una nueva familia
+    /cap2 Dios instituye la familia y Sus leyes para ella
+    cap3 ¿Cuál es la base de la familia y su acción?
+    cap4 Lo que deben hacer los padres
+    cap5 Lo que no deben hacer los padres
+    cap6 La edades que Dios nos dio en la vida
+    cap7 Diseño diferente y complementario
+    cap8 Educando en comodato
+    cap9 Familias cristianas, naciones y generaciones en libertad
+    cap10 Eligiendo una nueva familia
     Ir a /escuela
     """, parse_mode="markdown")
 
@@ -295,8 +251,8 @@ def tablacontenido_command(update: Update, _: CallbackContext):
 def capitulo1_command(update: Update, _: CallbackContext):
     update.message.reply_text("""═════════════════════\n
     *1️⃣ Dios piensa en individuos, naciones y generaciones*\n
-    📺 [Vídeo](https://youtu.be/VIS5FIt1wa0)
-    📝 [Formulario](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform?usp=sf_link)
+    📺 [Vídeo Cap. 1](https://youtu.be/VIS5FIt1wa0)
+    📝 [Formulario Cap. 1](https://docs.google.com/forms/d/e/1FAIpQLSeVXR0DxsS8v6IvZwWM59lN1_vD74b-IVdPSJWvcdrT3Asmvg/viewform?usp=sf_link)
     \n\n"""
     +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n\n"""+str(update.effective_chat.id)+"""\n
     ═════════════════════\n
@@ -313,27 +269,28 @@ def capitulo1_command(update: Update, _: CallbackContext):
     ▶️ /tablacontenido
     ▶️ /escuela
     """, parse_mode="markdown")
-############# FIN ESCUELA DE PADRES #################
-
-############# LISTADOS KIT #################
-def kit_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
-    update.message.reply_text("""
-    🤝 Elige el grupo respectivo en este _link_:\n
     
-    ▶️ [Lista pagos y entrega de kit](https://docs.google.com/spreadsheets/d/1fKt4x70n3gfto281aB_sGzuXN9YY_3ZSPyN8zWPdKNY/edit#gid=383016375)
-
+#Capitulo 2
+def capitulo2_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""═════════════════════\n
+    *2⃣ Dios instituye la familia y Sus leyes para ella*\n
+    📺 [Vídeo Cap. 2](https://youtu.be/1ztK-m4AkCY)
+    📝 [Formulario Cap. 2](https://docs.google.com/forms/d/e/1FAIpQLSf9_I4L5FFdR0D930qtj-4opo0ZR706x3o-FBqRaD57563nEA/viewform?usp=sf_link)
+    \n\n"""
+    +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n\n"""+str(update.effective_chat.id)+"""\n
+    ═════════════════════\n
     """, parse_mode="markdown")
-
-############# IMPRIMIR PDF #################
-def imprimirpdf():
-    doc = canvas.Canvas("estado_cuenta_academia.pdf")
-    doc.drawString(100, 750, "Hola Mundo!!!")
-    doc.save()
-
-def imprimirpdf_command(update: Update, _: CallbackContext): #f"*Hola* {update.effective_user.first_name}:"+
-    imprimirpdf()
-    update.message.reply_text("después del imprimir")
-    update.message.reply_document("recaudoText7.txt")
+    idea= choice(["💫 DIOS es el creador de la familia y estableció leyes específicas para ella.", 
+"💫 Con el matrimonio se manifiesta el querer formar una familia.", 
+"💫 La familia se constituye por padre, madre y mínimo un hijo, aunque Dios quiere que al menos se tengan cuatro hijos.", 
+"💫 La educación de los hijos es una tarea dada por Dios a los padres.",
+"💫 La familia es la unión de un hombre y una mujer siendo adultos, que conviven bajo el mismo techo, en un lugar independiente y tienen hijos para educarlos."])
+    update.message.reply_text("""
+    *Ideas Fundacionales*\n"""+idea+"""\n
+    ▶️ /tablacontenido
+    ▶️ /escuela
+    """, parse_mode="markdown")
+############# FIN ESCUELA DE PADRES #################
 
 # código de sistema
 def main() -> None:
@@ -343,7 +300,6 @@ def main() -> None:
 
 # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler("clases", clases_primero)) #probando botón
     dispatcher.add_handler(CommandHandler("id", consulta_id_chat_command))
     dispatcher.add_handler(CommandHandler("start", start_command))
     dispatcher.add_handler(CommandHandler("ayuda", help_command))
@@ -352,11 +308,10 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("horarios", horarios_command))
     dispatcher.add_handler(CommandHandler("cuenta", estadocuenta_command))
     dispatcher.add_handler(CommandHandler("linkpse", link_pse_command))
-    dispatcher.add_handler(CommandHandler("kitsi", kit_command))
-    dispatcher.add_handler(CommandHandler("pdf", imprimirpdf_command))
     dispatcher.add_handler(CommandHandler("escuela", escuelapadres_command))
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("cap1", capitulo1_command))
+    dispatcher.add_handler(CommandHandler("cap2", capitulo2_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
     
 # Start the Bot
