@@ -189,113 +189,113 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
     if user_message in [1001267993107,1001495905419,637490155,545054499,1001410910756,477108352,1001445422887,1001470298709,726249836,1001266243352,587492183,1001283899591,566823099,1001221364964,594244247,528328293,748250659,662072738,756678131,710900500,422965172,776155007,633478750,676845958,623339134,752044425,560957978,1001196292071,757466026,740479597,599226510,501580454,581778935,1001368730091,672121967,439651001,1001211791436,1001338979168,748183480,1001167380937,790584346,728612699,698079942,734477373,611306758,535466020,767162818,1001305466129,756580481,1001264500088,557416475,1001461280909,1001192665079,622292237,1001464329565,799222645,1001142933062,472357309,759343522,647748494,1001406436321,552517645,538487341,620071757,351031030,518641853,723545874,732978397,554086935,1001339104279,510276625,575000667,1001440528243,1001182500455,672736997,490850457,699687288,559530067,1001570276588,595069557,551577974,1001302901969,770507589,1001451733819,1001274258420,1001312416160,554322447,1001320754846,1001150498120,1001266990295,1001481165950,612122202,1001457216726,558915467,624580913,755233786,655489125,792102174,545183138,574533361,640252592,1001278091682,1001328107083,563619371,752083719,1001279231726,1001488952760,595199550,1001208965865,1001302095736,689406794,1001404608798,1001477355014,682647226,568864068,1001205518852,788104944,786775660,603922579,503477914,728811067,1001172739471,724799453,619265285,711805812,690587999,481876860,551345504,566487320,656747872,689522479,542153732,791801131,627594336,611831400,785058298,757583293,635882146,770969970,493365506,683321440,774961259,556879023,1001283932268,452871317,723804901,581702445,580389531,637109239,1001469218139,1001483924582,765722062,536682869,451366432,621280014,1001189318617,1001319311940,593397709,432540381,1001404608798,408511221,1001370703658,484414281,600154036,470613869,515092503,599089927,1001223256071,1001496758574,662976236,1001358586027,516150994,678622863,629386700,791313000,671096309,577911714,726621973,795685020,642140962,319341829,634237815,1103508213,1001206589331,360394219,724196433,690912365,1001741297507,1001374770303,794732548,505871413,1001315818754,555771002,524874696,528116276,549528860,1001277784940,728773748,1001199538935,730294525,779969592,1001365628615,1001405770808,1001414647950,1001406444172,692273587,1001288308029,569663296,792104990,740177499,510741897,478229244,554322447,1001487750670,750091325,710560974,732019615,755666935,732059711,526287404]:
         recaudoPD = pd.read_csv ('https://docs.google.com/spreadsheets/d/e/2PACX-1vQyGXMDTSbh_vXeYVpkFF91ARGNYMKvYM27LfuFn35SJ78ja7ARPIhlQ9GU_hUOz596HIfQLo9L45_u/pub?gid=330651820&single=true&output=csv')
         id_est=int(user_message)
-        recaudoPD["Pago"] = pd.Series(recaudoPD["Pago"])
-        recaudoPD["Pago"] = pd.to_numeric(recaudoPD["Pago"], downcast='integer')
-        recaudoPD["Valor"] = pd.Series(recaudoPD["Valor"])
-        recaudoPD["Valor"] = pd.to_numeric(recaudoPD["Valor"], downcast='integer')
-        filtro = recaudoPD["ID"] == id_est
-        my_filtro = recaudoPD[filtro]
-        myFiltroSort = my_filtro.sort_values("Fecha")
-        myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
+	recaudoPD["Pago"] = pd.Series(recaudoPD["Pago"])
+	recaudoPD["Pago"] = pd.to_numeric(recaudoPD["Pago"], downcast='integer')
+	recaudoPD["Valor"] = pd.Series(recaudoPD["Valor"])
+	recaudoPD["Valor"] = pd.to_numeric(recaudoPD["Valor"], downcast='integer')
+	filtro = recaudoPD["ID"] == id_est
+	my_filtro = recaudoPD[filtro]
+	myFiltroSort = my_filtro.sort_values("Fecha")
+	myFiltroSort[["Pago","Valor"]]=myFiltroSort[["Pago","Valor"]].applymap("{:.0f}".format)
 
-        file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
+	file1 = myFiltroSort[["Concepto","Fecha","Pago","Valor"]]
 
-        f = open("recaudo.txt","w", encoding="utf-8")
-        f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
-        f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
-        archivoJson = file1.to_json(orient="split")
-        parsed = json.loads(archivoJson)
-        f.write("Los costos educativos están en rojo 🔴 \n y los pagos realizados en verde 🟢:\n")
+	f = open("recaudo.txt","w", encoding="utf-8")
+	f.write("ESTADO DE CUENTA"+"\n\n"+"Estudiante:\n" + str(my_filtro.iloc[0,1])+ '\n\n')
+	f.write("Correo de recepción facturas DIAN: " + "\n" + str(my_filtro.iloc[0,6]) + '\n\n')
+	archivoJson = file1.to_json(orient="split")
+	parsed = json.loads(archivoJson)
+	f.write("Los costos educativos están en rojo 🔴 \n y los pagos realizados en verde 🟢:\n")
 
-        with open('recaudo.json','w', encoding="utf-8") as f:
-		json.dump(parsed,f, indent=4)
+	with open('recaudo.json','w', encoding="utf-8") as f:
+	json.dump(parsed,f, indent=4)
 
 
-        with open ('recaudo.json','r', encoding="utf-8") as f:
-		recaudo_json =json.load(f)
+	with open ('recaudo.json','r', encoding="utf-8") as f:
+	recaudo_json =json.load(f)
 
-        for i in range(len(recaudo_json["data"])):
-		print (recaudo_json["data"][i])
+	for i in range(len(recaudo_json["data"])):
+	print (recaudo_json["data"][i])
 
-		with open ('recaudo.txt','a', encoding="utf-8") as f:
-	        f.write("_______________________________"+'\n')
-	        f.write(str(recaudo_json["data"][i])+'\n')
+	with open ('recaudo.txt','a', encoding="utf-8") as f:
+	    f.write("_______________________________"+'\n')
+	    f.write(str(recaudo_json["data"][i])+'\n')
 
-        f=open("recaudo.txt","a", encoding="utf-8")
-        totalCostos = my_filtro["Valor"].sum()
-        totalPagos = my_filtro["Pago"].sum()
-        pendiente = totalCostos-totalPagos
-        a_favor="Pendientes"
-        if pendiente<0:
-		a_favor=" A favor."
-        f.write("\n")
-        f.write("Total a la fecha : {:=17,} ".format(totalCostos))
-        f.write("\n")
-        f.write("🟢 Pagado       : {:=17,} ".format(totalPagos))
-        f.write("\n")
-        f.write("🔴 {}   : {:=14,} ".format(a_favor,pendiente))
-        f.write("\n\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
-        f.write("/mediodepago")
-        f.close()
+	f=open("recaudo.txt","a", encoding="utf-8")
+	totalCostos = my_filtro["Valor"].sum()
+	totalPagos = my_filtro["Pago"].sum()
+	pendiente = totalCostos-totalPagos
+	a_favor="Pendientes"
+	if pendiente<0:
+	a_favor=" A favor."
+	f.write("\n")
+	f.write("Total a la fecha : {:=17,} ".format(totalCostos))
+	f.write("\n")
+	f.write("🟢 Pagado       : {:=17,} ".format(totalPagos))
+	f.write("\n")
+	f.write("🔴 {}   : {:=14,} ".format(a_favor,pendiente))
+	f.write("\n\n"+"Ir al siguiente link para acceder a los medios de pago: "+"\n")
+	f.write("/mediodepago")
+	f.close()
 
-        registro=open("recaudo.txt","r", encoding="utf-8")
-        f = open("recaudoText.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("]","")
-		f.write(xf)
-        f.close()
+	registro=open("recaudo.txt","r", encoding="utf-8")
+	f = open("recaudoText.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("]","")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText.txt","r", encoding="utf-8")
-        f = open("recaudoText1.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("[","")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText.txt","r", encoding="utf-8")
+	f = open("recaudoText1.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("[","")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText1.txt","r", encoding="utf-8")
-        f = open("recaudoText2.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("🔴\', \'","🔴\nPlazo: ")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText1.txt","r", encoding="utf-8")
+	f = open("recaudoText2.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("🔴\', \'","🔴\nPlazo: ")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText2.txt","r", encoding="utf-8")
-        f = open("recaudoText3.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("\', \'0\', \'","\nValor a pagar: $")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText2.txt","r", encoding="utf-8")
+	f = open("recaudoText3.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("\', \'0\', \'","\nValor a pagar: $")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText3.txt","r", encoding="utf-8")
-        f = open("recaudoText4.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("\'","")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText3.txt","r", encoding="utf-8")
+	f = open("recaudoText4.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("\'","")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText4.txt","r", encoding="utf-8")
-        f = open("recaudoText5.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace("🟢, ","🟢\nFecha:")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText4.txt","r", encoding="utf-8")
+	f = open("recaudoText5.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace("🟢, ","🟢\nFecha:")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText5.txt","r", encoding="utf-8")
-        f = open("recaudoText6.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace(", 0","")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText5.txt","r", encoding="utf-8")
+	f = open("recaudoText6.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace(", 0","")
+	f.write(xf)
+	f.close()
 
-        registro=open("recaudoText6.txt","r", encoding="utf-8")
-        f = open("recaudoText7.txt","w", encoding="utf-8")
-        for x in registro:
-		xf=x.replace(", ","\nPagado: $")
-		f.write(xf)
-        f.close()
+	registro=open("recaudoText6.txt","r", encoding="utf-8")
+	f = open("recaudoText7.txt","w", encoding="utf-8")
+	for x in registro:
+	xf=x.replace(", ","\nPagado: $")
+	f.write(xf)
+	f.close()
 
-        f = open("recaudoText7.txt","r", encoding="utf-8")
-        return f.read()
+	f = open("recaudoText7.txt","r", encoding="utf-8")
+	return f.read()
 
 ### FIN LISTA DOCENTES ###
 
