@@ -144,13 +144,6 @@ def handle_message(update, context):
         text = str(update.message.text).lower()
         response = R.sample_responses(text)
         update.message.reply_text(response)
-        id_chat_guion = str(update.effective_chat.id)
-        id_chat_string = id_chat_guion.replace("-", "")
-        id_est=int(id_chat_string)
-        if id_est in [741245286]:
-            update.message.reply_text("""Hola familia ! \n
-            Se registra pago pendiente con Academia de las Américas,\n por favor revise su estado de cuenta\n
-            /cuenta""")
         
 #Estado de cuenta
 def estadocuenta_command(update: Update, _: CallbackContext):
