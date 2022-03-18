@@ -336,7 +336,7 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 ### FIN LISTA DOCENTES ###
 
-#Default 
+#Default _
     aleatorio = ""#choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴",""])
     
     return aleatorio
