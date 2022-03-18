@@ -336,6 +336,17 @@ Hola 🌺,\n\n Para conocer los medios de pago vaya a /mediodepago\n"""
 
 ### FIN LISTA DOCENTES ###
 
+#START Mensaje de cobro
+    if user_message in ("⬇"):
+        return ("""
+        Hola familia !\n\n
+        Se registra pago pendiente.\n
+        Por favor consultar su estado de cuenta\n
+        /cuenta\n\n
+        Estar al día con los pagos nos ayuda a prestar mejor el servicio.
+        """)
+#END Mensaje de cobro
+
 #Default _
     aleatorio = ""#choice(["/help 💬","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","🟠🟢🔵🔴",""])
     
