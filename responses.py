@@ -45,16 +45,16 @@ def sample_responses(input_text):
 #            return aleatorio_saludo_formal
 
 #Aviso escuela de padres
-    intent_aviso_escuela_padres = ("mu", "um","pu","up")
-    for x in intent_aviso_escuela_padres:
-        if re.search(x, user_message) is not None:
-            return """
-👋 Perdón interrumpo: \n
-Le recordamos que los acudientes deben hacer la Escuela de Padres.\n
-Los capítulos 1 y 2 están disponibles.\n
-Ingrese a este link:\n
-/escuela
-"""
+#    intent_aviso_escuela_padres = ("mu", "um","pu","up")
+#    for x in intent_aviso_escuela_padres:
+#        if re.search(x, user_message) is not None:
+#            return """
+#👋 Perdón interrumpo: \n
+#Le recordamos que los acudientes deben hacer la Escuela de Padres.\n
+#Los capítulos 1 y 2 están disponibles.\n
+#Ingrese a este link:\n
+#/escuela
+#"""
 
 #Escuela de padres
     intent_escuela_padres = ("escuela de padres", "escuela padres")
