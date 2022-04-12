@@ -298,14 +298,26 @@ def directory_command(update: Update, _: CallbackContext):
     Estamos para ayudarte, estos son los números de celular si deseas llamar.\n
     Si la solicitud no es urgente puedes llamarnos en este horario:\n *6:00 AM a 5:00 PM de lunes a viernes*.\n
     En horas de la mañana estamos en clases y podemos demorar en responder.\n
+    Dir. Grupo Primero: Yeciris Contreras
+    Cel. 3004599904 /n
+    Dir. Grupo Segundo: Ramit Medina
+    Cel. 3135645747 /n
+    Dir. Grupo Tercero: Katy Daza
+    Cel. 3046773499 /n
+    Dir. Grupo Cuarto: José Romero
+    Cel. 3053497992 /n
+    Dir. Grupo Quinto: Alexander Redondo
+    Cel. 3017495229 /n
+    Dir. Grupo Sexto: Andrea Rivera
+    Cel. 3215551366 /n
     Secretaría
-    [3022999720](tel://3022999720) 
+    Cel. 3022999720 /n
     Asistente: Emilce Orozco
-    Cel. 3023301304
+    Cel. 3023301304 /n
     Coordinadora: Nesith Díaz
-    Cel. 3017495229
+    Cel. 3017495229 /n
     Director: Alexander Redondo
-    Cel. 3017495229
+    Cel. 3017495229 /n
     """, parse_mode="markdown")
     
 ############# END DIRECTORY #################
