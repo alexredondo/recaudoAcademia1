@@ -292,6 +292,20 @@ def capitulo2_command(update: Update, _: CallbackContext):
     """, parse_mode="markdown")
 ############# FIN ESCUELA DE PADRES #################
 
+############# START DIRECTORY #################
+def directory_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""
+    Estamos para ayudarte, estos son los números de celular si deseas llamar.\n
+    Si la solicitud no es urgente puedes llamarnos en este horario: *6:00 AM a 5:00 PM de lunes a viernes*.\n
+    En horas de la mañana estamos en clases y podemos demorar en responder.\n
+    """, parse_mode="markdown")
+    update.message.reply_text("""
+    Director\n
+    Alexander Redondo.\n
+    Celular: 3017495229
+    """, parse_mode="markdown")
+############# END DIRECTORY #################
+    
 # código de sistema
 def main() -> None:
     token = os.environ['TOKEN']
