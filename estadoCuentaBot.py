@@ -298,13 +298,14 @@ def directory_command(update: Update, _: CallbackContext):
     Estamos para ayudarte, estos son los números de celular si deseas llamar.\n
     Si la solicitud no es urgente puedes llamarnos en este horario:\n *6:00 AM a 5:00 PM de lunes a viernes*.\n
     En horas de la mañana estamos en clases y podemos demorar en responder.\n
-    Secretaría \n [3022999720](tel:3022999720) 
-    Asistente: Emilce Orozco \n
-    Cel.\n 3023301304
-    Coordinadora: Nesith Díaz \n
-    Cel.\n 3017495229
-    Director: Alexander Redondo \n
-    Cel.\n 3017495229
+    Secretaría
+    [3022999720](tel://3022999720) 
+    Asistente: Emilce Orozco
+    Cel. 3023301304
+    Coordinadora: Nesith Díaz
+    Cel. 3017495229
+    Director: Alexander Redondo
+    Cel. 3017495229
     """, parse_mode="markdown")
     
 ############# END DIRECTORY #################
