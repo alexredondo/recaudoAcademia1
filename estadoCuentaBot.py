@@ -326,6 +326,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("cap1", capitulo1_command))
     dispatcher.add_handler(CommandHandler("cap2", capitulo2_command))
+    dispatcher.add_handler(CommandHandler("directorio", directory_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
     
 # Start the Bot
