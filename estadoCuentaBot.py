@@ -296,14 +296,26 @@ def capitulo2_command(update: Update, _: CallbackContext):
 def directory_command(update: Update, _: CallbackContext):
     update.message.reply_text("""
     Estamos para ayudarte, estos son los números de celular si deseas llamar.\n
-    Si la solicitud no es urgente puedes llamarnos en este horario: *6:00 AM a 5:00 PM de lunes a viernes*.\n
+    Si la solicitud no es urgente puedes llamarnos en este horario:\n *6:00 AM a 5:00 PM de lunes a viernes*.\n
     En horas de la mañana estamos en clases y podemos demorar en responder.\n
     """, parse_mode="markdown")
     update.message.reply_text("""
-    Director\n
-    Alexander Redondo.\n
-    Celular: 3017495229
+    Secretaría \n
+    Cel.\n 3022999720
     """, parse_mode="markdown")
+    update.message.reply_text("""
+    Asistente: Emilce Orozco \n
+    Cel.\n 3023301304
+    """, parse_mode="markdown")
+    update.message.reply_text("""
+    Coordinadora: Nesith Díaz \n
+    Cel.\n 3017495229
+    """, parse_mode="markdown")
+    update.message.reply_text("""
+    Director: Alexander Redondo \n
+    Cel.\n 3017495229
+    """, parse_mode="markdown")
+    
 ############# END DIRECTORY #################
     
 # código de sistema
