@@ -236,7 +236,7 @@ def tablacontenido_command(update: Update, _: CallbackContext):
     *TABLA DE CONTENIDO*:\n
     /cap1 Dios piensa en individuos, naciones y generaciones
     /cap2 Dios instituye la familia y Sus leyes para ella
-    cap3 ¿Cuál es la base de la familia y su acción?
+    /cap3 ¿Cuál es la base de la familia y su acción?
     cap4 Lo que deben hacer los padres
     cap5 Lo que no deben hacer los padres
     cap6 La edades que Dios nos dio en la vida
@@ -294,9 +294,9 @@ def capitulo2_command(update: Update, _: CallbackContext):
 #Capitulo 3
 def capitulo3_command(update: Update, _: CallbackContext):
     update.message.reply_text("""═════════════════════\n
-    3 Dios instituye la familia y Sus leyes para ella*\n
-    📺 [Vídeo Cap. 3](https://youtu.be/1ztK-m4AkCY)
-    📝 [Formulario Cap. 3](https://docs.google.com/forms/d/e/1FAIpQLSf9_I4L5FFdR0D930qtj-4opo0ZR706x3o-FBqRaD57563nEA/viewform?usp=sf_link)
+    3 ¿Cuál es la base de la familia y su acción?*\n
+    📺 [Vídeo Cap. 3](https://youtu.be/eor_WcZ9W9I)
+    📝 [Formulario Cap. 3]("")
     \n\n"""
     +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n\n"""+str(update.effective_chat.id)+"""\n
     ═════════════════════\n
@@ -366,6 +366,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("tablacontenido", tablacontenido_command))
     dispatcher.add_handler(CommandHandler("cap1", capitulo1_command))
     dispatcher.add_handler(CommandHandler("cap2", capitulo2_command))
+    dispatcher.add_handler(CommandHandler("cap3", capitulo3_command))
     dispatcher.add_handler(CommandHandler("directorio", directory_command))
     dispatcher.add_handler(MessageHandler(Filters.text, handle_message))
     
