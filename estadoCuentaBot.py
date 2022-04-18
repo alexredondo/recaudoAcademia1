@@ -290,6 +290,30 @@ def capitulo2_command(update: Update, _: CallbackContext):
     ▶️ /tablacontenido
     ▶️ /escuela
     """, parse_mode="markdown")
+    
+#Capitulo 3
+def capitulo3_command(update: Update, _: CallbackContext):
+    update.message.reply_text("""═════════════════════\n
+    3 Dios instituye la familia y Sus leyes para ella*\n
+    📺 [Vídeo Cap. 3](https://youtu.be/1ztK-m4AkCY)
+    📝 [Formulario Cap. 3](https://docs.google.com/forms/d/e/1FAIpQLSf9_I4L5FFdR0D930qtj-4opo0ZR706x3o-FBqRaD57563nEA/viewform?usp=sf_link)
+    \n\n"""
+    +str(update.effective_user.first_name)+""" el cuestionario le pedirá el Id del estudiante:\n\n"""+str(update.effective_chat.id)+"""\n
+    ═════════════════════\n
+    """, parse_mode="markdown")
+    idea= choice(["💫 La base de la familia es el matrimonio cristiano.", 
+"💫 La base de la nación es la familia cristiana.", 
+"💫 La base del matrimonio es el hombre cristiano.", 
+"💫 La base del hombre y la mujer cristiana es Jesucristo.",
+"💫 En la familia pueden haber desacuerdo, pero no conflicto. Efesios 4:26",
+"💫 Tanto los padres como los hijos deben obedecer a Dios.",
+"💫 Los padres representan a Dios delante de los hijos.",
+"💫 Una familia cristiana cumple su objetivo cuando ha evangelizado y discipulado a sus hijos, y éstos se autogobiernan bajo Dios en todo."])
+    update.message.reply_text("""
+    *Ideas Fundacionales*\n"""+idea+"""\n
+    ▶️ /tablacontenido
+    ▶️ /escuela
+    """, parse_mode="markdown")
 ############# FIN ESCUELA DE PADRES #################
 
 ############# START DIRECTORY #################
